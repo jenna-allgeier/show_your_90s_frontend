@@ -1,4 +1,6 @@
 import React from "react";
+import LoginForm from "../components/LoginForm"
+import Register from "../components/Register"
 
 const Login = () => {
   return (
@@ -6,6 +8,8 @@ const Login = () => {
       <div className="title">
         <h1>Make Your Account</h1>
         <h2>Yay!</h2>
+        <LoginForm />
+        <Register />
       </div>
     </div>
   );

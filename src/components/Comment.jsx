@@ -4,12 +4,20 @@ import { useNavigate } from "react-router-dom";
 
 const Comment = (props) => {
   let navigate = useNavigate();
+  const [ selectedComment, setComment ] = useState({})
 
   const submitData = (e) => {
     e.preventDefault();
     props.addComment(e);
     navigate("/feed");
   };
+
+  useEffect(() => {
+    submitData();
+    return () => {
+        setComment({})
+    }
+   }, [selectedComment])
 
   return (
     <div id="newDiv">

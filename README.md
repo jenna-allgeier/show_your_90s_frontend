@@ -1,70 +1,109 @@
-# Getting Started with Create React App
+# SHOW YOUR 90s
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+&nbsp;
+![SHOW YOUR 90s](https://www.lifesavvy.com/p/uploads/2021/07/f5bf4567.jpg?width=500.png)
+&nbsp;
 
-## Available Scripts
+***
+## Date: 04/15/2022
 
-In the project directory, you can run:
+### By: 
 
-### `npm start`
+#### Angie Adams | [Github](https://github.com/angieadams68) | [LinkedIn](https://www.linkedin.com/in/aqsa-saleheen/)
+#### Jenna Allgeier | [Github](https://github.com/jenna-allgeier) | [LinkedIn](https://www.linkedin.com/in/jenna-allgeier/)
+#### Koa Garces | [Github](https://github.com/koagarces) | [LinkedIn](https://www.linkedin.com/in/koa-garces/)
+#### Ryan Garner | [Github](https://github.com/rpgarner) | [LinkedIn](https://www.linkedin.com/in/ryan-garner22/)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+&nbsp;
+## ***DESCRIPTION***
+### Finally! A place to share your favorite 90s memorabilia!
+&nbsp;
+Show your 90's is a full stack PERN application. Designed to have full CRUD functionality. Meaning you can Post, Get, Put, and Delete your favorite 90's memborbilia, and relive the greatest decade of our life time. 
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+#### But why? Find out here ![SLIDES](https://docs.google.com/presentation/d/1gbWMI4Hrw0ed9FUgHYPMJ6Yyef6LfyTFmL96CIGToY4/edit#slide=id.p
 
-### `npm test`
+![Love90's](https://media3.giphy.com/media/26xBONeDEE2I0FIzu/giphy.gif)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### MVP:
 
-### `npm run build`
+* Welcome Page:
+  * button to login & button to sign-up
+* Login:
+  * sign-up form & register form
+* User Profiles:
+  * Nickname
+  * Latin Name/Common Name
+  * Adoption Date
+  * Sun Needs (dropdown menu: Sun Bather, Beach Umbrella, Full Protection)
+  * Watering Needs (dropdown menu: Heavy Drinker, Just One Please, Only on special occasions)
+  * Notes (example: Fertilized on 03/28)
+* Feed:
+  * posts & comments
+* Posts (CRUD):
+  * item name
+  * release date
+  * description
+  * image
+  * likes  
+* Comments on post:
+  * text & likes 
+&nbsp;
+&nbsp;
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### ***App Screenshots:***
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+&nbsp;
+![Show Your 90s]()
+&nbsp;
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### **DEPLOYED APP AT [SHOW YOUR 90s]()**
 
-### `npm run eject`
+![lets go](https://64.media.tumblr.com/6ae60ec2d52391ad4d58f76609cc68b2/tumblr_nsdwh11q5e1t55xupo1_400.gifv)
+ &nbsp;
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### ***Technologies***
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+![PERN](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqrStmQUCLaVRfBhmxtI29TcOyJciZrOcOrxwB1YdPyWBRr_S4FBOCK5A2X68XbYqKrwc&usqp=CAU)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+* HTML
+ * CSS
+    * Flexbox
+    * Grid
+* JavaScript
+   * React.js
+ * Express
+ * Sequelize
+ * Postgres
+ * Heroku
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+&nbsp;
+### **Instructions for Developers**
+* Fork and clone this repo.
 
-## Learn More
+&nbsp;
+### **Known Issues**
+* None yet!
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+&nbsp;
+### ***Future Updates***
+* Full CRUD for comments
+* Posts showing up in profiles
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+&nbsp;
 
-### Code Splitting
+### **BUILDING PLAN**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+![building](https://vstevam.com/images/building.gif)
 
-### Analyzing the Bundle Size
+##### **CHECK OUT MORE ON [TRELLO](https://trello.com/b/9A5v7gPD/show-your-90s)**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+##### **LINK TO THE [ERD](https://drive.google.com/file/d/1WXpu_o-41euPxuBuOSyxwLFfqtKqZvb0/view?usp=sharing)**
 
-### Making a Progressive Web App
+##### **LINK TO THE [CHD](https://drive.google.com/file/d/1GV6zhRHM3hbMfGCKByNbWwD8HnbCUQvm/view?usp=sharing)**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+##### **LINK TO THE [SLIDES](https://docs.google.com/presentation/d/1gbWMI4Hrw0ed9FUgHYPMJ6Yyef6LfyTFmL96CIGToY4/edit#slide=id.p)**
+&nbsp;
 
-### Advanced Configuration
+### ***Credits***
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+#### **[Image of Lava Lamp](https://www.lifesavvy.com/reviews/the-best-lava-lamps-for-illuminating-your-bedroom/)**

@@ -16,14 +16,6 @@ const Comment = (props) => {
       <div className="leaveAComment">Leave a Comment</div>
       <form className="form" onSubmit={submitData}>
         <input
-          className="formName formInput"
-          type="text"
-          value={props.Comment.name}
-          onChange={props.handleChange}
-          name={"name"}
-          placeholder={"your name"}
-        />
-        <input
           className="formComment formInput"
           type="text-area"
           value={props.Comment.comment}

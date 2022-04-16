@@ -6,7 +6,7 @@ const Post = (props) => {
     return (
       <div className="posts">
         <div className="img-wrapper">
-          <img src={props.image} alt="Post" />
+          <img className="image" src={props.image} alt="Post" />
         </div>
         <div className="info-wrapper">
           <h1>{props.name}</h1>

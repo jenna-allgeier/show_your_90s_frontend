@@ -24,10 +24,10 @@ const LoginForm = (props) => {
 
   return (
     <div id="newDiv">
-      <div className="login-form">Login</div>
+      <div className="login-register">Login</div>
       <form className="form" onSubmit={submitData}>
         <input
-          className="formLoginForm formInput"
+          className="formInput"
           type="text-area"
         //   value={props.LoginForm.username}
           onChange={handleChange}
@@ -35,14 +35,14 @@ const LoginForm = (props) => {
           placeholder={"username"}
         />
         <input
-          className="formLoginForm formInput"
+          className="formInput"
           type="text-area"
         //   value={props.LoginForm.password}
           onChange={handleChange}
           name={"password"}
           placeholder={"password"}
         />
-        <button className="formButton">Submit</button>
+        <button className="button">Submit</button>
       </form>
     </div>
   );

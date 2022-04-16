@@ -1,17 +1,22 @@
 import React from "react";
 import { TestGetUserByPk } from "../services/Users"
+import { TestGetPostByPk } from "../services/Posts";
 import { useParams } from "react-router-dom"
 
 const UserProfile = () => {
   let { id } = useParams()
   const user = TestGetUserByPk()
-  console.log(user)
+  const post = TestGetPostByPk()
+  console.log(post)
   return (
     <div className="user-profile">
-      <div className="title">
-        <h1>The Most 90s Kid</h1>
-        <h2>All my 90s stuff</h2>
-        <h3>{user.firstName} {user.lastName}</h3>
+      <div className="profile-text">
+        <h1>{user.firstName} {user.lastName}</h1>
+        <h3>About: {user.about}</h3>
+        <h1>Personal Collection</h1>
+        <h2>{post.postName}</h2>
+        <h3>{post.releaseDate}</h3>
+        <h3>{post.description}</h3>
       </div>
     </div>
   );

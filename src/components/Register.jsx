@@ -27,10 +27,10 @@ const Register = (props) => {
 
   return (
     <div id="newDiv">
-      <div className="leaveARegister">Register</div>
+      <div className="login-register">Register</div>
       <form className="form" onSubmit={submitData}>
         <input
-          className="formRegister formInput"
+          className="formInput"
           type="text-area"
         //   value={Register.firstName}
           onChange={handleChange}
@@ -38,7 +38,7 @@ const Register = (props) => {
           placeholder={"first name"}
         />
         <input
-          className="formRegister formInput"
+          className="formInput"
           type="text-area"
         //   value={Register.lastName}
           onChange={handleChange}
@@ -46,7 +46,7 @@ const Register = (props) => {
           placeholder={"last name"}
         />
         <input
-          className="formRegister formInput"
+          className="formInput"
           type="text-area"
         //   value={Register.userName}
           onChange={handleChange}
@@ -54,7 +54,7 @@ const Register = (props) => {
           placeholder={"username"}
         />
         <input
-          className="formRegister formInput"
+          className="about-you formInput"
           type="text-area"
         //   value={Register.about}
           onChange={handleChange}
@@ -62,7 +62,7 @@ const Register = (props) => {
           placeholder={"about you!"}
         />
         <input
-          className="formRegister formInput"
+          className="formInput"
           type="text-area"
         //   value={Register.email}
           onChange={handleChange}
@@ -70,7 +70,7 @@ const Register = (props) => {
           placeholder={"your email"}
         />
         <input
-          className="formRegister formInput"
+          className="formInput"
           type="text-area"
         //   value={Register.password}
           onChange={handleChange}
@@ -78,14 +78,14 @@ const Register = (props) => {
           placeholder={"your password"}
         />
         <input
-          className="formRegister formInput"
+          className="formInput"
           type="text-area"
         //   value={Register.password}
           onChange={handleChange}
           name={"confirmPassword"}
           placeholder={"confirm your password"}
         />
-        <button className="formButton">Submit</button>
+        <button className="button">Submit</button>
       </form>
     </div>
   );

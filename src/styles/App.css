@@ -25,28 +25,50 @@
 
 .welcome {
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: column;
   color: teal;
   justify-content: center;
   align-items: center;
   align-content: center;
 }
 
-.feed {
+/* .feed {
 background-image: url("https://images.squarespace-cdn.com/content/v1/582652888419c24bb250e196/1559309451779-66EGGFEVB3XGKG14ITM0/90s_background.jpg?format=1500w");
 background-size: cover;
 height: 300px;
 width: 300px;
+} */
+
+.post {
+  display: flex;
+  flex-flow: column;
+  color: teal;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
 }
 
 .title {
   display: flex;
-  flex-flow: column wrap;
+  flex-flow: column;
   color: teal;
+  text-align: center;
   justify-content: center;
   align-items: center;
   align-content: center;
-  margin: 10px;
+}
+
+.img-wrapper {
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.image {
+  max-height: 200px;
+}
+
+.info-wrapper {
   padding: 10px;
 }
 
@@ -56,4 +78,45 @@ width: 300px;
   justify-content: center;
   align-items: center;
   font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  margin: 20px;
+}
+
+.formInput {
+  padding: 10px;
+  margin: 8px;
+  width: 300px;
+  border-color: teal;
+  text-align: start;
+  padding-left: 12px;
+}
+
+.button {
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid white;
+  border-radius: 15px;
+  background-color: teal;
+  color: white;
+  font-weight: bolder;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.login-register {
+  margin-top: 10px;
+  margin-bottom: -10px;
+  font-size: 30px;
+}
+
+.about-you {
+  height: 150px;
+}
+
+.profile-text {
+  display: flex;
+  flex-flow: column;
+  color: teal;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
 }

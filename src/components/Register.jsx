@@ -2,68 +2,88 @@ import React, { useState } from "react";
 import "../styles/App.css";
 import { useParams, useNavigate } from "react-router-dom";
 
-const LoginForm = (props) => {
+const Register = (props) => {
   let navigate = useNavigate();
   let { id } = useParams()
-  const [ selectedLoginForm, setLoginForm ] = useState({})
+
+  const [registerValues, setRegisterValues] = useState({
+    firstName: '',
+    lastName: '',
+    userName: '',
+    about: '',
+    password: '',
+    confirmPassword: '',
+  })
+
+  const handleChange = (e) => {
+    setRegisterValues({ ...registerValues, [e.target.name]: e.target.value })
+  }
 
   const submitData = (e) => {
     e.preventDefault();
-    props.addLoginForm(e);
-    navigate(`/profile/${id}`);
+    console.log(e.target[0].value)
+    // navigate(`/profile/${id}`);
   };
 
   return (
     <div id="newDiv">
-      <div className="leaveALoginForm">Register</div>
+      <div className="leaveARegister">Register</div>
       <form className="form" onSubmit={submitData}>
         <input
-          className="formLoginForm formInput"
+          className="formRegister formInput"
           type="text-area"
-        //   value={props.LoginForm.firstName}
-          onChange={props.handleChange}
+        //   value={Register.firstName}
+          onChange={handleChange}
           name={"firstName"}
           placeholder={"first name"}
         />
         <input
-          className="formLoginForm formInput"
+          className="formRegister formInput"
           type="text-area"
-        //   value={props.LoginForm.lastName}
-          onChange={props.handleChange}
+        //   value={Register.lastName}
+          onChange={handleChange}
           name={"lastName"}
           placeholder={"last name"}
         />
         <input
-          className="formLoginForm formInput"
+          className="formRegister formInput"
           type="text-area"
-        //   value={props.LoginForm.userName}
-          onChange={props.handleChange}
+        //   value={Register.userName}
+          onChange={handleChange}
           name={"userName"}
           placeholder={"username"}
         />
         <input
-          className="formLoginForm formInput"
+          className="formRegister formInput"
           type="text-area"
-        //   value={props.LoginForm.about}
-          onChange={props.handleChange}
+        //   value={Register.about}
+          onChange={handleChange}
           name={"about"}
-          placeholder={"About you!"}
+          placeholder={"about you!"}
         />
         <input
-          className="formLoginForm formInput"
+          className="formRegister formInput"
           type="text-area"
-        //   value={props.LoginForm.email}
-          onChange={props.handleChange}
+        //   value={Register.email}
+          onChange={handleChange}
           name={"email"}
           placeholder={"your email"}
         />
         <input
-          className="formLoginForm formInput"
+          className="formRegister formInput"
           type="text-area"
-        //   value={props.LoginForm.password}
-          onChange={props.handleChange}
+        //   value={Register.password}
+          onChange={handleChange}
           name={"password"}
           placeholder={"your password"}
+        />
+        <input
+          className="formRegister formInput"
+          type="text-area"
+        //   value={Register.password}
+          onChange={handleChange}
+          name={"confirmPassword"}
+          placeholder={"confirm your password"}
         />
         <button className="formButton">Submit</button>
       </form>
@@ -71,4 +91,4 @@ const LoginForm = (props) => {
   );
 };
 
-export default LoginForm;
+export default Register;

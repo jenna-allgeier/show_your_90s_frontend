@@ -1,27 +1,36 @@
 import React, { useState } from "react";
 import "../styles/App.css";
 import { useParams, useNavigate } from "react-router-dom";
+import { TestGetAllUsers } from "../services/Users";
 
 const LoginForm = (props) => {
   let navigate = useNavigate();
-  let { id } = useParams()
-  const [ selectedLoginForm, setLoginForm ] = useState({})
+  const [formValues, setFormValues] = useState({
+    username: '',
+    password: '',
+  })
+
+  const handleChange = (e) => {
+    setFormValues({ ...formValues, [e.target.name]: e.target.value })
+  }
 
   const submitData = (e) => {
     e.preventDefault();
-    props.addLoginForm(e);
-    navigate(`/profile/${id}`);
+    const username = e.target[0].value
+    const user = TestGetAllUsers().find( (user) => {return user.userName === username})
+    props.setUserHandler(user)
+    navigate(`/profile/${user.id}`);
   };
 
   return (
     <div id="newDiv">
-      <div className="leaveALoginForm">Login</div>
+      <div className="login-form">Login</div>
       <form className="form" onSubmit={submitData}>
         <input
           className="formLoginForm formInput"
           type="text-area"
         //   value={props.LoginForm.username}
-          onChange={props.handleChange}
+          onChange={handleChange}
           name={"username"}
           placeholder={"username"}
         />
@@ -29,7 +38,7 @@ const LoginForm = (props) => {
           className="formLoginForm formInput"
           type="text-area"
         //   value={props.LoginForm.password}
-          onChange={props.handleChange}
+          onChange={handleChange}
           name={"password"}
           placeholder={"password"}
         />

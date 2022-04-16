@@ -14,8 +14,8 @@ const UserProfile = () => {
         <h1>{user.firstName} {user.lastName}</h1>
         <h3>About: {user.about}</h3>
         <h1>Personal Collection</h1>
+        <img className="image" src={post.images}></img>
         <h2>{post.postName}</h2>
-        <img src={post.images}></img>
         <h3>{post.releaseDate}</h3>
         <h3>{post.description}</h3>
       </div>

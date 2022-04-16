@@ -1,13 +1,23 @@
 import React from "react";
 import Post from "../components/Post"
+import { TestGetAllPosts } from "../services/Posts";
 
 const Feed = () => {
+  const posts = TestGetAllPosts()
+  console.log(posts)
   return (
     <div className="feed">
-      <div className="title">
-        <h1>Posts</h1>
-        <h2>Finally! Some 90s memorabilia!</h2>
-        <Post />
+      <div className="post">
+        {posts.map((post) => {
+          return <Post 
+          image={post.images}
+          name={post.postName}
+          releaseDate={post.releaseDate}
+          description={post.description}
+          likes={post.likes}
+          />
+        })}
+        
       </div>
     </div>
   );

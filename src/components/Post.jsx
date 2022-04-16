@@ -9,9 +9,9 @@ const Post = (props) => {
           <img src={props.image} alt="Post" />
         </div>
         <div className="info-wrapper flex-row space">
-          {/* <h3>{props.postName}</h3>
-          <p> {releaseDate} </p>
-          <p>{description}</p> */}
+          <h3>{props.name}</h3>
+          <p> {props.releaseDate} </p>
+          <p>{props.description}</p>
         </div>
       </div>
     )

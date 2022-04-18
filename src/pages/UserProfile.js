@@ -9,17 +9,19 @@ const UserProfile = () => {
   const post = TestGetPostByPk()
   console.log(post)
   return (
-    <div className="user-profile">
-      <div className="profile-text">
+    <div className="profile-container">
+      <div className="user-info">
         <h1>{user.firstName} {user.lastName}</h1>
-        <h3>About: {user.about}</h3>
+        <h3 className="description">About: {user.about}</h3>
+      </div>
+      <div className="user-collection">
         <h1>Personal Collection</h1>
         <img className="image" src={post.images}></img>
-        <h2>{post.postName}</h2>
-        <h3>{post.releaseDate}</h3>
-        <h3>{post.description}</h3>
+        <h2 className="title-date">{post.postName}</h2>
+        <h4 className="title-date">Release Date: {post.releaseDate}</h4>
+        <h4 className="description">Description: {post.description}</h4>
       </div>
-    </div>
+      </div>
   );
 };
 

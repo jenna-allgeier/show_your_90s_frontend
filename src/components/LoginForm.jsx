@@ -23,8 +23,8 @@ const LoginForm = (props) => {
   };
 
   return (
-    <div id="newDiv">
-      <div className="login-register">Login</div>
+    <div>
+      <h2 className="login-register">Login</h2>
       <form className="form" onSubmit={submitData}>
         <input
           className="formInput"

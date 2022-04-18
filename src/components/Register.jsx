@@ -26,8 +26,8 @@ const Register = (props) => {
   };
 
   return (
-    <div id="newDiv">
-      <div className="login-register">Register</div>
+    <div>
+      <h2 className="login-register">Register</h2>
       <form className="form" onSubmit={submitData}>
         <input
           className="formInput"

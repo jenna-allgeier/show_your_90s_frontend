@@ -2,48 +2,56 @@ import React, { useEffect } from "react";
 import { Link, useNavigate, useParams } from 'react-router-dom';
 import Post from "../components/Post"
 import { GetPostByPk } from "../services/Posts";
+import { GetCommentsByPostPk } from "../services/Comments"
 import Comment from "../components/Comment"
 
 const PostDetails = (props) => {
 
-    let { id } = useParams()
+    let { postId } = useParams()
+
+    postId = parseInt(postId)
 
     const renderPost = async () => {
-    const post =  await GetPostByPk(id)
-    props.selectedPostHandler(post)
-    console.log(post)
-    // navigate(`/profile/${user.id}`);
+        const currentPost =  await GetPostByPk(postId)
+        props.selectedPostHandler(currentPost)
+        console.log(currentPost)
+        // navigate(`/profile/${user.id}`);
     };
+
+    const renderComments = async () => {
+        const currentComments = await GetCommentsByPostPk(postId)
+        props.setPreviousCommentsHandler(currentComments)
+        console.log(typeof(currentComments))
+    }
 
     useEffect(() => {
     renderPost()
+    renderComments()
     }, [])
 
 
     return (
     <div className="post-details">
         <div className="post">
-        {props.post.map((post) => {
-            return <Post 
-            name={post.postName}
-            image={post.images}
-            releaseDate={post.releaseDate}
-            description={post.description}
-            likes={post.likes}
-            />
-        })}
+        
+            <div>
+            <h1>{props.post.postName}</h1>
+            <img src={props.post.images}></img>
+            <h4>{props.post.releaseDate}</h4>
+            <p>{props.post.description}</p>
+            <p>{props.post.likes}</p>
+            </div>
         
         </div>
-        {/* <div className="previous-comments">
+        <div className="previous-comments">
         <h1>Previous Comments</h1>
-        {comments.map((comment) => {
-            return <Comment 
-            name={comment.name}
-            description={comment.description}
-            likes={comment.likes}
+            {/* console.log(props.previousComment) */}
+            <Comment 
+            name={props.previousComments.name}
+            description={props.previousComments.description}
+            likes={props.previousComments.likes}
             />
-        })}
-        </div> */}
+        </div>
     </div>
     );
     };

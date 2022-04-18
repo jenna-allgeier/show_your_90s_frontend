@@ -10,9 +10,9 @@ export const GetRecentPosts = async () => {
       }
 }
 
-export const GetPostByPk = async () => {
+export const GetPostByPk = async (id) => {
     try {
-        const res = await Client.get('api/posts/:post_id')
+        const res = await Client.get(`api/posts/${id}`)
         console.log(res.data)
         return res.data
     } catch (error) {

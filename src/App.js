@@ -12,6 +12,8 @@ import { useState } from "react"
 const App = () => {
   const [authenticated, toggleAuthenticated] = useState(false)
   const [user, setUser] = useState(null)
+  const [newComment, setNewComment] = useState(null)
+  const [previousComments, setPreviousComments] = useState(null)
 
   const setUserHandler = (nextUser) => {
     setUser(nextUser)
@@ -30,7 +32,11 @@ const App = () => {
             setUserHandler={setUserHandler}
             toggleAuthenticated={toggleAuthenticated}
           />} />
-          <Route path="feed" element={<Feed />} />
+          <Route path="feed" element={
+          <Feed 
+          setNewComment={setNewComment}
+          setPreviousComments={setPreviousComments}
+          />} />
         </Routes>
       </main>
     </div>

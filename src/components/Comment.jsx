@@ -6,6 +6,13 @@ const Comment = (props) => {
   
   return
   <div>
+    <div className="previous-comment">
+      <h2>{props.name}</h2>
+      <p>{props.description}</p>
+      <h3>{props.likes}</h3>
+
+
+    </div>
 
   </div>
 };

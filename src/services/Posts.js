@@ -1,15 +1,13 @@
 import Client from "./api";
 
-export const GetAllPosts = () => {
+export const GetRecentPosts = async () => {
     try {
-        const res = await Client.get('/posts')
+        const res = await Client.get('api/posts/recent')
         console.log(res.data)
         return res.data
       } catch (error) {
         throw error
       }
-
-
 }
 
 

@@ -1,16 +1,29 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Post from "../components/Post"
-import { TestGetAllPosts } from "../services/Posts";
+import { GetRecentPosts, TestGetAllPosts } from "../services/Posts";
 import { TestGetAllComments } from "../services/Comments";
 import Comment from "../components/Comment"
 
-const Feed = () => {
-  const posts = TestGetAllPosts()
+const Feed = (props) => {
+
+  useEffect(() => {
+    renderPosts()
+  }, [])
+
+  const renderPosts = (e) => {
+    e.preventDefault();
+    const postName = e.target[0].value
+    const posts = GetRecentPosts().find( (post) => {return post.postName === postName})
+    props.setPosts(posts)
+    console.log(posts)
+    // navigate(`/profile/${user.id}`);
+  };
   
+  
+  // const posts = GetRecentPosts()
   const comments = TestGetAllComments()
 
 
-  console.log(posts)
   return (
     <div className="feed">
       <div className="post">

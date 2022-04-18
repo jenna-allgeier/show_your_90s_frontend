@@ -7,6 +7,7 @@ import UserProfile from "./pages/UserProfile";
 import Welcome from "./pages/Welcome";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import PostDetails from "./pages/PostDetails"
 
 const App = () => {
   const [authenticated, toggleAuthenticated] = useState(false)

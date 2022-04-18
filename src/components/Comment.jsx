@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 
 const Comment = (props) => {
   
-  return
+  return (
   <div>
     <div className="previous-comment">
       <h2>{props.name}</h2>
@@ -15,6 +15,6 @@ const Comment = (props) => {
     </div>
 
   </div>
-};
+  )};
 
 export default Comment;

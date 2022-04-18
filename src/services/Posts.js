@@ -1,5 +1,18 @@
 import Client from "./api";
 
+export const GetAllPosts = () => {
+    try {
+        const res = await Client.get('/posts')
+        console.log(res.data)
+        return res.data
+      } catch (error) {
+        throw error
+      }
+
+
+}
+
+
 export const TestGetAllPosts = () => {
     return [
     {

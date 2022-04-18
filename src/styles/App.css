@@ -2,40 +2,204 @@
   text-align: center;
 }
 
+/* Nav */
 .nav-header {
   display: flex;
   flex-direction: row-reverse;
   justify-content: space-between;
   align-items: center;
   padding: 10px;
-  margin: 10px;
   min-height: 2em;
   font-family: 'Georgia';
+  background-color: #2C1679;
 }
 
 .links {
-  color: rgb(204, 77, 204);
+  color: white;
   text-decoration: none;
-  font-size: 20px;
+  font-size: 23px;
   font-weight: bolder;
-  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   padding: 10px;
   margin: 10px;
 }
 
+/* Welcome */
+
 .welcome {
   display: flex;
-  flex-flow: row wrap;
-  color: teal;
+  flex-flow: column;
+  color: #0CCDDB;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  margin: 20px;
+}
+
+.welcome-text {
+  display: flex;
+  flex-flow: column;
+  color: #2C1679;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 20px;
+}
+
+.show-your-90s {
+  font-size: 60px;
+  margin-bottom: -5px;
+}
+
+.welcome-btns {
+  margin: 30px;
+  padding: 20px;
+  border: 1px solid #871CA1;
+  border-radius: 15px;
+  color: #0CCDDB;
+  background-color: white;
+  font-weight: bolder;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 30px;
+}
+
+/* Login/Register */
+
+.login-register-format {
+  display: flex;
+  flex-flow: column;
+  color: #2C1679;
+  text-align: center;
   justify-content: center;
   align-items: center;
   align-content: center;
 }
 
-/* .feed {
-text-align: center;
+.form {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 20px;
+}
+
+.formInput {
+  padding: 10px;
+  margin: 8px;
+  width: 300px;
+  border-color: #0CCDDB;
+  text-align: start;
+  padding-left: 12px;
+}
+
+.button {
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid #871CA1;
+  border-radius: 15px;
+  color: #2C1679;
+  background-color: white;
+  font-weight: bolder;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+}
+
+.login-register-title {
+  margin-top: 20px;
+  margin-bottom: -30px;
+  font-size: 20px;
+}
+
+.login-register {
+  margin-top: -10px;
+}
+
+/* Feed */
+
+.feed {
 background-image: url("https://images.squarespace-cdn.com/content/v1/582652888419c24bb250e196/1559309451779-66EGGFEVB3XGKG14ITM0/90s_background.jpg?format=1500w");
-background-position: center;
-  height: 100%;
-  background-repeat: no-repeat;
-} */
+}
+
+.post {
+  display: flex;
+  flex-flow: column;
+  color: #871CA1;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+.post-title {
+  color: #2C1679;
+  margin-top: -5px;
+}
+
+.posts {
+  background-color: rgb(255, 255, 255, 0.9);
+  border-radius: 10px;
+  width: 450px;
+  margin: 20px;
+}
+
+.img-wrapper {
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.image {
+  max-height: 300px;
+}
+
+.info-wrapper {
+  margin-top: -20px;
+  padding: 10px;
+}
+
+/* Profile */
+
+.profile-container {
+  display: flex;
+  flex-flow: column;
+  color: #2C1679;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+.about-you {
+  height: 150px;
+}
+
+.user-info {
+  margin-bottom: 20px;
+}
+
+.user-collection {
+  display: flex;
+  flex-flow: column;
+  color: #2C1679;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  border: 2px solid #2C1679;
+  width: 500px;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.description {
+  color: #871CA1;
+}
+
+.title-date {
+  margin: 5px;
+}
+
+.image {
+  margin-bottom: 20px;
+}

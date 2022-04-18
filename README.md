@@ -31,14 +31,13 @@ Show your 90's is a full stack PERN application. Designed to have full CRUD func
 * Login:
   * sign-up form & register form
 * User Profiles:
-  * Nickname
-  * Latin Name/Common Name
-  * Adoption Date
-  * Sun Needs (dropdown menu: Sun Bather, Beach Umbrella, Full Protection)
-  * Watering Needs (dropdown menu: Heavy Drinker, Just One Please, Only on special occasions)
-  * Notes (example: Fertilized on 03/28)
-* Feed:
-  * posts & comments
+  * First Name
+  * Last Name
+  * Username
+  * About
+  * Email
+  * Password
+
 * Posts (CRUD):
   * item name
   * release date

@@ -6,12 +6,12 @@ const Post = (props) => {
     return (
       <div className="posts">
         <div className="img-wrapper">
-          <img src={props.image} alt="Post" />
+          <img className="image" src={props.image} alt="Post" />
         </div>
-        <div className="info-wrapper flex-row space">
-          <h3>{props.postName}</h3>
-          <p> {releaseDate} </p>
-          <p>{description}</p>
+        <div className="info-wrapper">
+          <h1 className="post-title">{props.name}</h1>
+          <h3>Release date: {props.releaseDate} </h3>
+          <p>Description: {props.description}</p>
         </div>
       </div>
     )

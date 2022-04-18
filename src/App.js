@@ -7,6 +7,7 @@ import UserProfile from "./pages/UserProfile";
 import Welcome from "./pages/Welcome";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import PostDetails from "./pages/PostDetails"
 
 const App = () => {
   const [authenticated, toggleAuthenticated] = useState(false)
@@ -46,6 +47,7 @@ const App = () => {
       <Navbar user={user} />
 
       <main>
+        <div className='background'>
         <Routes>
           <Route index element={<Welcome />} />
           <Route path="profile/:userId" element={<UserProfile />} />
@@ -79,11 +81,16 @@ const App = () => {
           setPreviousCommentsHandler={setPreviousCommentsHandler}
           />} />
         </Routes>
+        </div>
       </main>
+      
       <footer>
-        <nav className="nav-header">
+        <nav className="navFooter">
           <Link className="links footerlinks" to="/">
             Home
+          </Link>
+          <Link className="links footerlinks" to="/">
+            Sign Out
           </Link>
         </nav>
       </footer>

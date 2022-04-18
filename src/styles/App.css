@@ -32,10 +32,10 @@
   align-content: center;
 }
 
-.feed {
-
+/* .feed {
+text-align: center;
 background-image: url("https://images.squarespace-cdn.com/content/v1/582652888419c24bb250e196/1559309451779-66EGGFEVB3XGKG14ITM0/90s_background.jpg?format=1500w");
-background-size: cover;
-height: 300px;
-width: 300px;
-}
+background-position: center;
+  height: 100%;
+  background-repeat: no-repeat;
+} */

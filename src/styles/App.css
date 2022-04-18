@@ -138,9 +138,9 @@ background-image: url("https://images.squarespace-cdn.com/content/v1/58265288841
 }
 
 .posts {
-  background-color: white;
+  background-color: rgb(255, 255, 255, 0.9);
+  border-radius: 10px;
   width: 450px;
-  border: 2px solid #2C1679;
   margin: 20px;
 }
 

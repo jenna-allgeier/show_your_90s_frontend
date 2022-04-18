@@ -12,6 +12,7 @@ import { useState } from "react"
 const App = () => {
   const [authenticated, toggleAuthenticated] = useState(false)
   const [user, setUser] = useState(null)
+  const [posts, setPosts] = useState([])
   const [newComment, setNewComment] = useState(null)
   const [previousComments, setPreviousComments] = useState(null)
 
@@ -33,7 +34,8 @@ const App = () => {
             toggleAuthenticated={toggleAuthenticated}
           />} />
           <Route path="feed" element={
-          <Feed 
+          <Feed
+          setPosts={setPosts}
           setNewComment={setNewComment}
           setPreviousComments={setPreviousComments}
           />} />

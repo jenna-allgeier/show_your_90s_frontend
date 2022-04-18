@@ -1,13 +1,12 @@
-import { Routes, Route } from 'react-router-dom'
-import './styles/App.css'
-import Navbar from './components/Navbar'
-import Feed from './pages/Feed'
-import LoginRegister from './pages/LoginRegister'
-import UserProfile from './pages/UserProfile'
-import Welcome from './pages/Welcome'
-import { useState } from "react"
-
-  
+import { Routes, Route } from "react-router-dom";
+import "./styles/App.css";
+import Navbar from "./components/Navbar";
+import Feed from "./pages/Feed";
+import LoginRegister from "./pages/LoginRegister";
+import UserProfile from "./pages/UserProfile";
+import Welcome from "./pages/Welcome";
+import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const App = () => {
   const [authenticated, toggleAuthenticated] = useState(false)
@@ -18,8 +17,8 @@ const App = () => {
   const [previousComments, setPreviousComments] = useState([])
 
   const setUserHandler = (nextUser) => {
-    setUser(nextUser)
-  }
+    setUser(nextUser);
+  };
 
   const setAllPostsHandler = (allPosts) => {
     setPosts(allPosts)
@@ -39,9 +38,8 @@ const App = () => {
 
   return (
     <div>
-      <Navbar 
-        user={user}
-      />
+      <Navbar user={user} />
+
       <main>
         <Routes>
           <Route index element={<Welcome />} />
@@ -68,7 +66,14 @@ const App = () => {
           />} />
         </Routes>
       </main>
+      <footer>
+        <nav className="nav-header">
+          <Link className="links footerlinks" to="/">
+            Home
+          </Link>
+        </nav>
+      </footer>
     </div>
-  )
-}
-export default App
+  );
+};
+export default App;

@@ -4,8 +4,8 @@ import Register from "../components/Register"
 
 const Login = (props) => {
   return (
-    <div className="login">
-      <div className="title">
+    <div className="login-register-title">
+      <div className="login-register-format">
         <h1>New to Show Your 90s?</h1>
         <Register />
         <h1>Already have an account?</h1>

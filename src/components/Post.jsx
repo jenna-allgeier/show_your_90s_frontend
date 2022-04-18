@@ -9,7 +9,7 @@ const Post = (props) => {
           <img className="image" src={props.image} alt="Post" />
         </div>
         <div className="info-wrapper">
-          <h1>{props.name}</h1>
+          <h1 className="post-title">{props.name}</h1>
           <h3>Release date: {props.releaseDate} </h3>
           <p>Description: {props.description}</p>
         </div>

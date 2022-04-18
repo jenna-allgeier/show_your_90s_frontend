@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "../styles/App.css";
 import { useParams, useNavigate } from "react-router-dom";
 
-const Register = (props) => {
+const Register = () => {
   let navigate = useNavigate();
   let { id } = useParams()
 
@@ -32,7 +32,6 @@ const Register = (props) => {
         <input
           className="formInput"
           type="text-area"
-        //   value={Register.firstName}
           onChange={handleChange}
           name={"firstName"}
           placeholder={"first name"}
@@ -40,7 +39,6 @@ const Register = (props) => {
         <input
           className="formInput"
           type="text-area"
-        //   value={Register.lastName}
           onChange={handleChange}
           name={"lastName"}
           placeholder={"last name"}
@@ -48,7 +46,6 @@ const Register = (props) => {
         <input
           className="formInput"
           type="text-area"
-        //   value={Register.userName}
           onChange={handleChange}
           name={"userName"}
           placeholder={"username"}
@@ -56,7 +53,6 @@ const Register = (props) => {
         <input
           className="about-you formInput"
           type="text-area"
-        //   value={Register.about}
           onChange={handleChange}
           name={"about"}
           placeholder={"about you!"}
@@ -64,7 +60,6 @@ const Register = (props) => {
         <input
           className="formInput"
           type="text-area"
-        //   value={Register.email}
           onChange={handleChange}
           name={"email"}
           placeholder={"your email"}
@@ -72,7 +67,6 @@ const Register = (props) => {
         <input
           className="formInput"
           type="text-area"
-        //   value={Register.password}
           onChange={handleChange}
           name={"password"}
           placeholder={"your password"}
@@ -80,7 +74,6 @@ const Register = (props) => {
         <input
           className="formInput"
           type="text-area"
-        //   value={Register.password}
           onChange={handleChange}
           name={"confirmPassword"}
           placeholder={"confirm your password"}

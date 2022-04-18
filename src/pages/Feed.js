@@ -6,18 +6,16 @@ import Comment from "../components/Comment"
 
 const Feed = (props) => {
 
-  useEffect(() => {
-    renderPosts()
-  }, [])
-
-  const renderPosts = (e) => {
-    e.preventDefault();
-    const postName = e.target[0].value
-    const posts = GetRecentPosts().find( (post) => {return post.postName === postName})
+  const renderPosts = async () => {
+    const posts =  await GetRecentPosts()
     props.setPosts(posts)
     console.log(posts)
     // navigate(`/profile/${user.id}`);
   };
+
+  useEffect(() => {
+    renderPosts()
+  }, [])
   
   
   // const posts = GetRecentPosts()
@@ -27,7 +25,7 @@ const Feed = (props) => {
   return (
     <div className="feed">
       <div className="post">
-        {posts.map((post) => {
+        {props.posts.map((post) => {
           return <Post 
           name={post.postName}
           image={post.images}

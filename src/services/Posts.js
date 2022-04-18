@@ -3,7 +3,7 @@ import Client from "./api";
 export const GetRecentPosts = async () => {
     try {
         const res = await Client.get('api/posts/recent')
-        console.log(res.data)
+        // console.log(res.data)
         return res.data
       } catch (error) {
         throw error

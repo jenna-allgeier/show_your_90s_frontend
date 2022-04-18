@@ -5,6 +5,7 @@ import Feed from './pages/Feed'
 import LoginRegister from './pages/LoginRegister'
 import UserProfile from './pages/UserProfile'
 import Welcome from './pages/Welcome'
+import PostDetails from './pages/PostDetails'
 import { useState } from "react"
 
   
@@ -13,6 +14,7 @@ const App = () => {
   const [authenticated, toggleAuthenticated] = useState(false)
   const [user, setUser] = useState([])
   const [posts, setPosts] = useState([])
+  const [post, selectedPost] = useState([])
   const [newPost, setNewPost] = useState ({})
   const [newComment, setNewComment] = useState([])
   const [previousComments, setPreviousComments] = useState([])
@@ -35,6 +37,10 @@ const App = () => {
 
   const setPreviousCommentsHandler = (thePreviousComments) => {
     setPreviousComments(thePreviousComments)
+  }
+
+  const selectedPostHandler = (theSelectedPost) => {
+    selectedPost(theSelectedPost)
   }
 
   return (
@@ -62,6 +68,15 @@ const App = () => {
           newComment={newComment}
           setNewComment={setNewComment}
           setNewCommentHandler={setNewCommentHandler}
+          previousComments={previousComments}
+          setPreviousComments={setPreviousComments}
+          setPreviousCommentsHandler={setPreviousCommentsHandler}
+          />} />
+          <Route path="feed/post/:postId" element={
+          <PostDetails
+          post={post}
+          selectedPost={selectedPost}
+          selectedPostHandler={selectedPostHandler} 
           previousComments={previousComments}
           setPreviousComments={setPreviousComments}
           setPreviousCommentsHandler={setPreviousCommentsHandler}

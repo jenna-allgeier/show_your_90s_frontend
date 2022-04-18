@@ -3,8 +3,10 @@
 }
 
 /* Nav */
+
 .nav-header {
   position: fixed;
+  
   width: 100%;
   display: flex;
   flex-direction: row-reverse;
@@ -13,7 +15,7 @@
   padding: 10px;
   min-height: 2em;
   font-family: 'Georgia';
-  background-color: #2C1679;
+  background-color: #e273ab;
 }
 
 .links {
@@ -23,7 +25,7 @@
   font-weight: bolder;
   font-family: Arial, Helvetica, sans-serif;
   padding: 10px;
-  margin: 10px;
+  margin: 0px;
 }
 
 /* Welcome */
@@ -35,27 +37,34 @@
   justify-content: center;
   align-items: center;
   align-content: center;
-  margin: 20px;
+  margin: 0px;
 }
 
 .welcome-text {
   display: flex;
   flex-flow: column;
-  color: #2C1679;
+  color: rgb(119, 145, 194);
   justify-content: center;
   align-items: center;
   align-content: center;
-  font-family: Arial, Helvetica, sans-serif;
-  margin: 20px;
+  font-family: monospace;
+  
+  /* font-family: Arial, Helvetica, sans-serif; */
+  margin: 45px 0 0 140px;
 }
 
 .show-your-90s {
-  font-size: 60px;
+  font-size: 80px;
   margin-bottom: -5px;
+}
+.welcomeMessage {
+  font-size: 30px;
+  text-align: center;
 }
 
 .welcome-btns {
   margin: 30px;
+  margin-left: 45px;
   padding: 20px;
   border: 1px solid #871CA1;
   border-radius: 15px;
@@ -64,6 +73,21 @@
   font-weight: bolder;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 30px;
+  box-shadow: 0 5px #999;
+  transition-duration: 0.5s;
+  opacity: 1;
+}
+
+.welcome-btns:hover {
+  background-color: #0CCDDB;
+  color: white;
+}
+.welcome-btns:active {
+  background-color: rgb(250, 250, 134);
+  color: grey;
+  box-shadow: 0 1px #666;
+  transform: translateY(4px);
+  opacity: 0.5;
 }
 
 /* Login/Register */
@@ -101,21 +125,51 @@
   padding: 10px;
   border: 1px solid #871CA1;
   border-radius: 15px;
-  color: #2C1679;
+  color: #0CCDDB;
   background-color: white;
   font-weight: bolder;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 20px;
+  box-shadow: 0 5px #999;
+  transition-duration: 0.5s;
+  opacity: 1;
+}
+
+.butoon:hover {
+  background-color: #0CCDDB;
+  color: white;
+}
+.button:active {
+  background-color: rgb(250, 250, 134);
+  color: grey;
+  box-shadow: 0 1px #666;
+  transform: translateY(4px);
+  opacity: 0.5;
 }
 
 .login-register-title {
-  margin-top: 20px;
-  margin-bottom: -30px;
+  /* margin-top: 20px;
+  margin-bottom: -30px; */
   font-size: 20px;
+}
+
+.login-register-format {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: baseline;
+  color: white;
+
 }
 
 .login-register {
   margin-top: -10px;
+}
+.login {
+  margin: 0 10px 350px 100px;
+}
+.register {
+  margin-top: 50px;
+  margin-right: 15px;
 }
 
 /* Feed */
@@ -170,6 +224,7 @@ background-image: url("https://images.squarespace-cdn.com/content/v1/58265288841
   justify-content: center;
   align-items: center;
   align-content: center;
+  padding-top: 50px;
 }
 
 .about-you {
@@ -209,15 +264,17 @@ background-image: url("https://images.squarespace-cdn.com/content/v1/58265288841
 
 
 .background {
-  background-image: url("https://www.nicepng.com/png/detail/896-8960344_solo-cup-solo-jazz-cup-design.png");
+  background-image: url("https://wallpapersafari.com/image/throwback-backgrounds.jpg");
   background-repeat: no-repeat;
+   height: 900px;
+  /* width: 1500px;  */
   background-size: cover;
-  height: 700px;
+ 
 }
 
 footer {
   position: fixed;
-  margin: 0 0 5px 0;
+  margin: 0 0 2px 0;
   bottom:0;
   left:0;
   right:0;
@@ -235,6 +292,12 @@ footer {
   margin: 10px;
 }
 
-div.background {
-  background-color: #ac32a4;
+
+
+.navFooter {
+  align-items: center;
+  margin-bottom: 10px;
+  min-height: 2em;
+  font-family: 'Georgia';
+  background-color: #74c0c5;
 }

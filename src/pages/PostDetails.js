@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import Post from "../components/Post"
-import { GetRecentPosts} from "../services/Posts";
+import { GetRecentPosts, TestGetAllPosts } from "../services/Posts";
 import Comment from "../components/Comment"
 
 const Feed = (props) => {
@@ -31,7 +31,7 @@ const Feed = (props) => {
         })}
         
       </div>
-      {/* <div className="previous-comments">
+      <div className="previous-comments">
         <h1>Previous Comments</h1>
         {comments.map((comment) => {
           return <Comment 
@@ -40,7 +40,7 @@ const Feed = (props) => {
           likes={comment.likes}
           />
         })}
-      </div> */}
+      </div>
     </div>
   );
 };

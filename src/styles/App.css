@@ -39,10 +39,17 @@
 .welcome-text {
   display: flex;
   flex-flow: column;
-  color: #0CCDDB;
+  color: #2C1679;
   justify-content: center;
   align-items: center;
   align-content: center;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 20px;
+}
+
+.show-your-90s {
+  font-size: 60px;
+  margin-bottom: -5px;
 }
 
 .welcome-btns {
@@ -50,7 +57,7 @@
   padding: 20px;
   border: 1px solid #871CA1;
   border-radius: 15px;
-  color: #2C1679;
+  color: #0CCDDB;
   background-color: white;
   font-weight: bolder;
   font-family: Arial, Helvetica, sans-serif;

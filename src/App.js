@@ -19,6 +19,10 @@ const App = () => {
   const setUserHandler = (nextUser) => {
     setUser(nextUser)
   }
+
+  const setAllPostsHandler = (allPosts) => {
+    setPosts(allPosts)
+  }
   return (
     <div>
       <Navbar 
@@ -35,7 +39,9 @@ const App = () => {
           />} />
           <Route path="feed" element={
           <Feed
+          posts={posts}
           setPosts={setPosts}
+          setAllPostsHandler={setAllPostsHandler}
           setNewComment={setNewComment}
           setPreviousComments={setPreviousComments}
           />} />

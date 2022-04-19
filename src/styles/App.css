@@ -2,6 +2,14 @@
   text-align: center;
 }
 
+.header {
+  height: 60px;
+}
+
+.footer {
+  height: 60px;
+}
+
 /* Nav */
 .nav-header {
   position: fixed;
@@ -149,10 +157,6 @@ background-image: url("https://images.squarespace-cdn.com/content/v1/58265288841
 .img-wrapper {
   padding: 20px;
   margin-top: 20px;
-}
-
-.image {
-  max-height: 300px;
 }
 
 .info-wrapper {

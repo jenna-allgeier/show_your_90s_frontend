@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { Link, useNavigate, useParams } from 'react-router-dom';
 import Post from "../components/Post"
 import { GetRecentPosts} from "../services/Posts";
-import Comment from "../components/Comment"
+import Comment from "../components/Comments"
 
 const Feed = (props) => {
 
@@ -23,6 +23,7 @@ const Feed = (props) => {
 
   return (
     <div className="feed">
+      <div className="header"/>
       <div className="post">
         {props.posts.map((post) => {
           return (

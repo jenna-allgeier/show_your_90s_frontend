@@ -6,6 +6,8 @@ import LoginRegister from "./pages/LoginRegister";
 import UserProfile from "./pages/UserProfile";
 import Welcome from "./pages/Welcome";
 import PostDetails from "./pages/PostDetails";
+import UpdatePost from "./components/UpdatePost";
+import CreatePost from "./components/CreatePost";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
@@ -79,6 +81,12 @@ const App = () => {
           setPreviousComments={setPreviousComments}
           setPreviousCommentsHandler={setPreviousCommentsHandler}
           />} />
+          <Route path="create-post" element={<CreatePost 
+          
+          />}/>
+          <Route path="update-post" element={<UpdatePost 
+          
+          />}/>  
         </Routes>
       </main>
       <footer>

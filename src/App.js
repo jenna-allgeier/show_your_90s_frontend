@@ -5,6 +5,7 @@ import Feed from "./pages/Feed";
 import LoginRegister from "./pages/LoginRegister";
 import UserProfile from "./pages/UserProfile";
 import Welcome from "./pages/Welcome";
+import PostDetails from "./pages/PostDetails";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import PostDetails from "./pages/PostDetails"

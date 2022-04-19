@@ -20,14 +20,14 @@
   flex-direction: row-reverse;
   justify-content: space-between;
   align-items: center;
-  padding: 10px;
+  padding: 5px;
   min-height: 2em;
   font-family: 'Georgia';
-  background-color: #e273ab;
+  background-color: #e994bf;
 }
 
 .links {
-  color: white;
+  color: rgb(0, 0, 0);
   text-decoration: none;
   font-size: 23px;
   font-weight: bolder;
@@ -52,27 +52,28 @@
 .welcome-text {
   display: flex;
   flex-flow: column;
-  color: rgb(119, 145, 194);
+  color: rgb(255, 255, 255);
   justify-content: center;
   align-items: center;
   align-content: center;
-  font-family: monospace;
-  
-  /* font-family: Arial, Helvetica, sans-serif; */
-  margin: 45px 0 0 140px;
+  margin: 90px 0 0 140px;
 }
+
 
 .show-your-90s {
   font-size: 80px;
-  margin-bottom: -5px;
+  margin-bottom: 5px;
+  margin-right: 60px;
+  font-family: 'Bradley Hand', cursive;
 }
 .welcomeMessage {
-  font-size: 30px;
+  font-size: 50px;
   text-align: center;
+  font-family: Arial, Helvetica, sans-serif
 }
 
 .welcome-btns {
-  margin: 30px;
+  margin: 50px;
   margin-left: 45px;
   padding: 20px;
   border: 1px solid #871CA1;
@@ -164,12 +165,12 @@
 
 .login-register-format {
   display: flex;
-  flex-direction: column;
-  justify-content: baseline;
+  flex-direction: row-reverse;
+  justify-content: space-around;
   color: rgb(0, 0, 0);
   font-size: 100% ;
-
 }
+
 
 .login-register {
   margin-top: -10px;
@@ -180,7 +181,7 @@
 .register {
   margin-top: 80px;
   margin-right: 15px;
-  margin-bottom: 200px;
+  margin-bottom: 300px;
 }
 
 .loginimage {
@@ -191,17 +192,12 @@
 
 .letsbe {
   display: flex;
-  font-size: 60px;
-  justify-content: center;
-  margin: 100px 0 20px 0;
+  font-size: 80px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+ flex-direction: column;
+  margin: 20px 0 400px 0;
+  
 }
-
-.forms {
-  display: flex;
-  flex-direction: row-reverse;
-
-}
-
 /* Feed */
 
 .feed {
@@ -217,6 +213,7 @@ background-image: url("https://images.squarespace-cdn.com/content/v1/58265288841
   align-items: center;
   align-content: center;
 }
+
 
 .post-title {
   color: #2C1679;
@@ -254,7 +251,7 @@ background-image: url("https://images.squarespace-cdn.com/content/v1/58265288841
 }
 
 .about-you {
-  height: 150px;
+  height: 70px;
 }
 
 .user-info {
@@ -285,23 +282,26 @@ background-image: url("https://images.squarespace-cdn.com/content/v1/58265288841
 
 .image {
   margin-bottom: 20px;
-  width: 350px;
+  width: 300px;
+  
 }
 
+.backgroundimg {
+    background-image: url("https://wprv.s3.eu-west-2.amazonaws.com/2016/08/the90s-500x272.jpg");
+    background-repeat: no-repeat;
+     height: 810px;
+    /* width: 1500px;  */
+    background-size: cover;
+   
+  }
+
+  .profileimg {
+    background-image: url("https://preview.redd.it/yk760wzrq5241.jpg?width=640&crop=smart&auto=webp&s=93094b88f6d85a25ab2bb24573e575ffa518cb4d");
+  }
 
 
-.background {
-  background-image: url("https://wallpapersafari.com/image/throwback-backgrounds.jpg");
-  background-repeat: no-repeat;
-   height: 900px;
-  /* width: 1500px;  */
-  background-size: cover;
- 
-}
 
-
-
-
+/* Footer */
 
 footer {
   position: fixed;
@@ -314,7 +314,7 @@ footer {
 }
 
 .footerlinks {
-  color: white;
+  color: rgb(0, 0, 0);
   text-decoration: none;
   font-size: 23px;
   font-weight: bolder;
@@ -324,14 +324,14 @@ footer {
 }
 
 
-
 .navFooter {
   align-items: center;
   margin-bottom: 10px;
   min-height: 2em;
   font-family: 'Georgia';
-  background-color: #74c0c5;
+  background-color: #39beba;
 }
+
 
 
 

@@ -48,7 +48,7 @@ const PostDetails = (props) => {
         <div className="header"/>
         <div className="post">
         
-            <div>
+            <div className="detail-container">
             <h1>{props.post.postName}</h1>
             <img src={props.post.images}></img>
             <h4>{props.post.releaseDate}</h4>

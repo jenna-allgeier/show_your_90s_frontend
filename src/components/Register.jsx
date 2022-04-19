@@ -1,16 +1,17 @@
 import React, { useState } from "react";
 import "../styles/App.css";
-import { useParams, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import { RegisterUser } from "../services/Auth";
 
 const Register = () => {
   let navigate = useNavigate();
-  let { id } = useParams()
 
   const [registerValues, setRegisterValues] = useState({
     firstName: '',
     lastName: '',
     userName: '',
     about: '',
+    email: '',
     password: '',
     confirmPassword: '',
   })
@@ -19,66 +20,104 @@ const Register = () => {
     setRegisterValues({ ...registerValues, [e.target.name]: e.target.value })
   }
 
-  const submitData = (e) => {
-    e.preventDefault();
-    console.log(e.target[0].value)
-    // navigate(`/profile/${id}`);
-  };
+  const handleSubmit = async (e) => {
+    e.preventDefault()
+    await RegisterUser({
+      firstName: registerValues.firstName,
+      lastName: registerValues.lastName,
+      userName: registerValues.userName,
+      about: registerValues.about,
+      email: registerValues.email,
+      password: registerValues.password
+    })
+    setRegisterValues({
+      firstName: '',
+      lastName: '',
+      userName: '',
+      about: '',
+      email: '',
+      password: '',
+      confirmPassword: '',
+    })
+    navigate('/signin')
+  }
 
   return (
     <div>
       <h2 className="login-register">Register</h2>
-      <form className="form" onSubmit={submitData}>
+      <form className="form" onSubmit={handleSubmit}>
         <input
           className="formInput"
-          type="text-area"
+          type="text"
           onChange={handleChange}
-          name={"firstName"}
-          placeholder={"first name"}
+          name="firstName"
+          placeholder="first name"
+          value={registerValues.firstName}
+          required
         />
         <input
           className="formInput"
-          type="text-area"
+          type="text"
           onChange={handleChange}
-          name={"lastName"}
-          placeholder={"last name"}
+          name="lastName"
+          placeholder="last name"
+          value={registerValues.lastName}
+          required
         />
         <input
           className="formInput"
-          type="text-area"
+          type="username"
           onChange={handleChange}
-          name={"userName"}
-          placeholder={"username"}
+          name="userName"
+          placeholder="username"
+          value={registerValues.userName}
+          required
         />
         <input
           className="about-you formInput"
-          type="text-area"
+          type="text"
           onChange={handleChange}
-          name={"about"}
-          placeholder={"about you!"}
+          name="about"
+          placeholder="about you!"
+          value={registerValues.about}
+          required
         />
         <input
           className="formInput"
-          type="text-area"
+          type="email"
           onChange={handleChange}
-          name={"email"}
-          placeholder={"your email"}
+          name="email"
+          placeholder="your email"
+          value={registerValues.email}
+          required
         />
         <input
           className="formInput"
-          type="text-area"
+          type="password"
           onChange={handleChange}
-          name={"password"}
-          placeholder={"your password"}
+          name="password"
+          placeholder="password"
+          value={registerValues.password}
+          required
         />
         <input
           className="formInput"
-          type="text-area"
+          type="password"
           onChange={handleChange}
-          name={"confirmPassword"}
-          placeholder={"confirm your password"}
+          name="confirmPassword"
+          placeholder="confirm password"
+          value={registerValues.confirmPassword}
+          required
         />
-        <button className="button">Submit</button>
+        <button 
+          className="button"
+          disabled={
+            !registerValues.email ||
+            (!registerValues.password &&
+            registerValues.confirmPassword === registerValues.password)
+          }
+          >Submit
+        </button>
       </form>
     </div>
   );

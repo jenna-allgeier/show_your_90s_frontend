@@ -10,7 +10,6 @@ import UpdatePost from "./components/UpdatePost";
 import CreatePost from "./components/CreatePost";
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import PostDetails from "./pages/PostDetails"
 
 const App = () => {
   const [authenticated, toggleAuthenticated] = useState(false)

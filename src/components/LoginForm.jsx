@@ -1,12 +1,13 @@
 import React, { useState } from "react";
 import "../styles/App.css";
 import { useParams, useNavigate } from "react-router-dom";
-import { TestGetAllUsers } from "../services/Users";
+import { SignInUser } from "../services/Auth";
 
 const LoginForm = (props) => {
   let navigate = useNavigate();
+  
   const [formValues, setFormValues] = useState({
-    username: '',
+    email: '',
     password: '',
   })
 
@@ -14,12 +15,13 @@ const LoginForm = (props) => {
     setFormValues({ ...formValues, [e.target.name]: e.target.value })
   }
 
-  const submitData = (e) => {
+  const submitData = async (e) => {
     e.preventDefault();
-    const username = e.target[0].value
-    const user = TestGetAllUsers().find( (user) => {return user.userName === username})
-    props.setUserHandler(user)
-    navigate(`/profile/${user.id}`);
+    const payload = await SignInUser(formValues)
+    setFormValues({ email: '', password: '' })
+    props.setUser(payload)
+    props.toggleAuthenticated(true)
+    navigate('/feed')
   };
 
   return (
@@ -28,21 +30,25 @@ const LoginForm = (props) => {
       <form className="form" onSubmit={submitData}>
         <input
           className="formInput"
-          type="text-area"
-        //   value={props.LoginForm.username}
+          type="email"
+          value={formValues.email}
           onChange={handleChange}
-          name={"username"}
-          placeholder={"username"}
+          name="email"
+          placeholder="example@example.com"
+          required
         />
         <input
           className="formInput"
           type="text-area"
-        //   value={props.LoginForm.password}
+          value={formValues.password}
           onChange={handleChange}
           name={"password"}
           placeholder={"password"}
+          required
         />
-        <button className="button">Submit</button>
+        <button className="button" disabled={!formValues.email || !formValues.password}>
+          Submit
+        </button>
       </form>
     </div>
   );

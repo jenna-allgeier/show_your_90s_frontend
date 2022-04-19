@@ -5,11 +5,10 @@ import Feed from "./pages/Feed";
 import LoginRegister from "./pages/LoginRegister";
 import UserProfile from "./pages/UserProfile";
 import Welcome from "./pages/Welcome";
-import PostDetails from "./pages/PostDetails";
-import UpdatePost from "./components/UpdatePost";
-import CreatePost from "./components/CreatePost";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import PostDetails from "./pages/PostDetails"
+import UpdatePost from "./components/UpdatePost";
 
 const App = () => {
   const [authenticated, toggleAuthenticated] = useState(false)
@@ -19,6 +18,10 @@ const App = () => {
   const [newPost, setNewPost] = useState ({})
   const [newComment, setNewComment] = useState([])
   const [previousComments, setPreviousComments] = useState([])
+
+  const setUserHandler = (nextUser) => {
+    setUser(nextUser);
+  };
 
   const setAllPostsHandler = (allPosts) => {
     setPosts(allPosts)
@@ -36,6 +39,7 @@ const App = () => {
     setPreviousComments(thePreviousComments)
   }
 
+
   const selectedPostHandler = (theSelectedPost) => {
     selectedPost(theSelectedPost)
   }
@@ -51,7 +55,7 @@ const App = () => {
           <Route path="profile/:userId" element={<UserProfile />} />
           <Route path="login" element={
           <LoginRegister 
-            setUser={setUser}
+            setUserHandler={setUserHandler}
             toggleAuthenticated={toggleAuthenticated}
           />} />
           <Route path="feed" element={
@@ -78,12 +82,9 @@ const App = () => {
           setPreviousComments={setPreviousComments}
           setPreviousCommentsHandler={setPreviousCommentsHandler}
           />} />
-          <Route path="create-post" element={<CreatePost 
-          
-          />}/>
-          <Route path="update-post" element={<UpdatePost 
-          
-          />}/>  
+          <Route path="feed/post/:postId/update-post" element={
+          <UpdatePost  selectedPost={selectedPost}
+          />} />
         </Routes>
         </div>
       </main>

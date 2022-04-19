@@ -144,7 +144,7 @@
   opacity: 1;
 }
 
-.butoon:hover {
+.button:hover {
   background-color: #0CCDDB;
   color: white;
 }
@@ -218,9 +218,25 @@ background-image: url("https://images.squarespace-cdn.com/content/v1/58265288841
   align-content: center;
   
 }
+.createPost {
+  position: fixed;
+  top: 100px;
+  right: 0;
+}
+
+.feedPosts {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
 
 .postDet {
-  background-color: rgb(250, 250, 134);
+ 
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
   
 }
 .updateForm {
@@ -228,6 +244,13 @@ background-image: url("https://images.squarespace-cdn.com/content/v1/58265288841
   flex-direction: column;
   justify-content: space-between;
   margin: 0 100px 50px 100px;
+  background-color: rgb(250, 250, 134);
+}
+.updateHeader {
+  margin-top: 100px;
+  color:  #0CCDDB;
+  font-size: xx-large;
+ 
 }
 
 .post-title {

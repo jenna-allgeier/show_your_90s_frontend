@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 const Comment = (props) => {
   return (
     <div>
-      <div className="previous-comment">
+      <div className="previous-comments">
         <h2>{props.name}</h2>
         <p>{props.description}</p>
         <h3>{props.likes}</h3>

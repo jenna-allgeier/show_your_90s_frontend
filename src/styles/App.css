@@ -189,7 +189,7 @@ background-image: url("https://images.squarespace-cdn.com/content/v1/58265288841
 
 .post {
   display: flex;
-  flex-flow: row;
+  flex-flow: column;
   color: #871CA1;
   text-align: center;
   justify-content: space-around;

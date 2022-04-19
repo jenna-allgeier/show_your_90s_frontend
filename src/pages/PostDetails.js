@@ -15,13 +15,11 @@ const PostDetails = (props) => {
     const renderPost = async () => {
         const currentPost =  await GetPostByPk(postId)
         props.selectedPostHandler(currentPost)
-        console.log(currentPost)
     };
 
     const renderComments = async () => {
         const currentComments = await GetCommentsByPostPk(postId)
         props.setPreviousCommentsHandler(currentComments)
-        console.log(typeof(currentComments))
     }
 
     useEffect(() => {

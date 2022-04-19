@@ -20,10 +20,6 @@ const App = () => {
   const [newComment, setNewComment] = useState([])
   const [previousComments, setPreviousComments] = useState([])
 
-  const setUserHandler = (nextUser) => {
-    setUser(nextUser);
-  };
-
   const setAllPostsHandler = (allPosts) => {
     setPosts(allPosts)
   }
@@ -55,7 +51,7 @@ const App = () => {
           <Route path="profile/:userId" element={<UserProfile />} />
           <Route path="login" element={
           <LoginRegister 
-            setUserHandler={setUserHandler}
+            setUser={setUser}
             toggleAuthenticated={toggleAuthenticated}
           />} />
           <Route path="feed" element={

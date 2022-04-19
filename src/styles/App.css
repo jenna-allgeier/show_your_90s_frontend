@@ -164,9 +164,10 @@
 
 .login-register-format {
   display: flex;
-  flex-direction: row-reverse;
+  flex-direction: column;
   justify-content: baseline;
-  color: white;
+  color: rgb(0, 0, 0);
+  font-size: 100% ;
 
 }
 
@@ -174,11 +175,31 @@
   margin-top: -10px;
 }
 .login {
-  margin: 0 10px 350px 100px;
+  margin: 80px 10px 350px 100px;
 }
 .register {
-  margin-top: 50px;
+  margin-top: 80px;
   margin-right: 15px;
+  margin-bottom: 200px;
+}
+
+.loginimage {
+  background-image: url("https://i.pinimg.com/originals/b8/85/c2/b885c2b9fdd509273ff3de33abe212ae.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.letsbe {
+  display: flex;
+  font-size: 60px;
+  justify-content: center;
+  margin: 100px 0 20px 0;
+}
+
+.forms {
+  display: flex;
+  flex-direction: row-reverse;
+
 }
 
 /* Feed */
@@ -289,6 +310,8 @@ background-image: url("https://images.squarespace-cdn.com/content/v1/58265288841
   background-size: cover;
  
 }
+
+
 
 
 

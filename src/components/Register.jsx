@@ -39,7 +39,7 @@ const Register = () => {
       password: '',
       confirmPassword: '',
     })
-    navigate('/signin')
+    navigate('/login')
   }
 
   return (

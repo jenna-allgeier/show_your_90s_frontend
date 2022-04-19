@@ -14,7 +14,10 @@ const Login = (props) => {
         <Register />
         </div>
         <div className="login">
-        <LoginForm setUserHandler={props.setUserHandler}/>
+        <h1>Already have an account?</h1>
+        <LoginForm 
+          setUser={props.setUser}
+          toggleAuthenticated={props.toggleAuthenticated}/>
         </div>
         </div>
       </div>

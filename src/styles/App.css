@@ -213,9 +213,21 @@ background-image: url("https://images.squarespace-cdn.com/content/v1/58265288841
   flex-flow: column;
   color: #871CA1;
   text-align: center;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   align-content: center;
+  
+}
+
+.postDet {
+  background-color: rgb(250, 250, 134);
+  
+}
+.updateForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0 100px 50px 100px;
 }
 
 .post-title {

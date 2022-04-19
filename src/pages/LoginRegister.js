@@ -4,10 +4,13 @@ import Register from "../components/Register"
 
 const Login = (props) => {
   return (
-    <div className="login-register-title">
+    
+    <div className="login-register-title loginimage">
+      
       <div className="login-register-format">
+      <h1 className= "letsbe">  Let's be... </h1> 
+      <div className="forms">
         <div className="register">
-        <h1>New to Show Your 90s?</h1>
         <Register />
         </div>
         <div className="login">
@@ -15,6 +18,7 @@ const Login = (props) => {
         <LoginForm 
           setUser={props.setUser}
           toggleAuthenticated={props.toggleAuthenticated}/>
+        </div>
         </div>
       </div>
     </div>

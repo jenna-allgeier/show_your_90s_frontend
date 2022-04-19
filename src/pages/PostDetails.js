@@ -47,7 +47,7 @@ const PostDetails = (props) => {
     <div className="post-details">
       <div className="header" />
       <div className="post">
-        <div>
+        <div className="detail-container">
           <h1>{props.post.postName}</h1>
           <img src={props.post.images}></img>
           <h4>{props.post.releaseDate}</h4>
@@ -55,7 +55,6 @@ const PostDetails = (props) => {
           <p>{props.post.likes}</p>
         </div>
       </div>
-      {/* render update/delete post button conditionally - is the user logged in? is the post associated with the user? */}
       <div className="button">
         <Link to="update-post">
           <button>Update</button>

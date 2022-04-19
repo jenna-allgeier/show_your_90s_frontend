@@ -20,14 +20,14 @@
   flex-direction: row-reverse;
   justify-content: space-between;
   align-items: center;
-  padding: 10px;
+  padding: 5px;
   min-height: 2em;
   font-family: 'Georgia';
-  background-color: #e273ab;
+  background-color: #e994bf;
 }
 
 .links {
-  color: white;
+  color: rgb(0, 0, 0);
   text-decoration: none;
   font-size: 23px;
   font-weight: bolder;
@@ -39,6 +39,10 @@
 
 /* Welcome */
 
+.threeD {
+ 
+}
+
 .welcome {
   display: flex;
   flex-flow: column;
@@ -49,30 +53,58 @@
   margin: 0px;
 }
 
+@keyframes example {
+  0%   {color:rgb(65, 65, 179); text-shadow: 20px 20px 10px rgb(250, 250, 134); left:0px; top:0px;}
+  25%  {color:#e994bf; text-shadow: 20px 20px 10px rgb(236, 183, 6); left:200px; top:0px;}
+  50%  {color:#0CCDDB; text-shadow: 20px 20px 10px rgb(65, 65, 179); left:200px; top:200px;}
+  75%  {color:rgb(250, 250, 134); text-shadow: 20px 20px 10px #e994bf; left:0px; top:200px;}
+  100% {color:#0CCDDB; text-shadow: 20px 20px 10px rgb(236, 183, 6); left:0px; top:0px;}
+}
+
 .welcome-text {
   display: flex;
   flex-flow: column;
-  color: rgb(119, 145, 194);
+  color: rgb(255, 255, 255);
   justify-content: center;
   align-items: center;
   align-content: center;
-  font-family: monospace;
-  
-  /* font-family: Arial, Helvetica, sans-serif; */
-  margin: 45px 0 0 140px;
+  margin: 90px 0 0 140px;
+ 
 }
+
 
 .show-your-90s {
   font-size: 80px;
-  margin-bottom: -5px;
+  color: #0CCDDB;
+  margin-bottom: 5px;
+  margin-right: 60px;
+  font-family: 'Bradley Hand', cursive;
+  text-shadow: 20px 20px 10px rgb(236, 183, 6);
+  width: 700px;
+  height: 100px;
+  position: relative;
+  animation-name: example;
+  animation-duration: 10s;
+  top: 20px;
+  animation-timing-function: ease-in-out;
 }
 .welcomeMessage {
-  font-size: 30px;
+  color: rgb(236, 183, 6);
+  font-size: 50px;
   text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  text-shadow: 20px 20px 10px rgb(6, 236, 217);
+  width: 1000px;
+  height: 100px;
+  position: relative;
+  animation-name: example;
+  animation-duration: 10s;
+  top: 30px;
+  animation-timing-function: ease-out;
 }
 
 .welcome-btns {
-  margin: 30px;
+  margin: 50px;
   margin-left: 45px;
   padding: 20px;
   border: 1px solid #871CA1;
@@ -144,7 +176,7 @@
   opacity: 1;
 }
 
-.butoon:hover {
+.button:hover {
   background-color: #0CCDDB;
   color: white;
 }
@@ -164,12 +196,12 @@
 
 .login-register-format {
   display: flex;
-  flex-direction: column;
-  justify-content: baseline;
+  flex-direction: row-reverse;
+  justify-content: space-around;
   color: rgb(0, 0, 0);
   font-size: 100% ;
-
 }
+
 
 .login-register {
   margin-top: -10px;
@@ -180,7 +212,7 @@
 .register {
   margin-top: 80px;
   margin-right: 15px;
-  margin-bottom: 200px;
+  margin-bottom: 300px;
 }
 
 .loginimage {
@@ -191,17 +223,12 @@
 
 .letsbe {
   display: flex;
-  font-size: 60px;
-  justify-content: center;
-  margin: 100px 0 20px 0;
+  font-size: 80px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+ flex-direction: column;
+  margin: 20px 0 400px 0;
+  
 }
-
-.forms {
-  display: flex;
-  flex-direction: row-reverse;
-
-}
-
 /* Feed */
 
 .feed {
@@ -210,7 +237,7 @@ background-image: url("https://images.squarespace-cdn.com/content/v1/58265288841
 
 .post {
   display: flex;
-  flex-flow: column;
+  flex-flow: row wrap;
   color: #871CA1;
   text-align: center;
   justify-content: space-around;
@@ -218,9 +245,25 @@ background-image: url("https://images.squarespace-cdn.com/content/v1/58265288841
   align-content: center;
   
 }
+.createPost {
+  position: fixed;
+  bottom: 10px;
+  right: 20px;
+}
+
+.feedPosts {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
 
 .postDet {
-  background-color: rgb(250, 250, 134);
+ 
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
   
 }
 .updateForm {
@@ -228,7 +271,15 @@ background-image: url("https://images.squarespace-cdn.com/content/v1/58265288841
   flex-direction: column;
   justify-content: space-between;
   margin: 0 100px 50px 100px;
+  background-color: rgb(250, 250, 134);
 }
+.updateHeader {
+  margin-top: 100px;
+  color:  #0CCDDB;
+  font-size: xx-large;
+ 
+}
+
 
 .post-title {
   color: #2C1679;
@@ -236,10 +287,32 @@ background-image: url("https://images.squarespace-cdn.com/content/v1/58265288841
 }
 
 .posts {
-  background-color: rgb(255, 255, 255, 0.9);
-  border-radius: 10px;
+  background-color: rgb(250, 250, 134);
+  border-radius: 10%;
   width: 450px;
   margin: 20px;
+  box-shadow: 20px 30px rgb(88, 88, 1);
+  transition-duration: 0.5s;
+  opacity: 1;
+}
+.posts:hover {
+  opacity: 0.8;
+  box-shadow: 20px 15px rgb(88, 88, 1);
+  cursor: pointer;
+}
+.posts:active {
+  background-color: rgb(250, 250, 134);
+  color: grey;
+  box-shadow: 0 1px #666;
+  transform: translateY(4px);
+  opacity: 0.5;
+  cursor: grabbing;
+}
+
+.detail-container {
+  background-color:rgb(250, 250, 134) ;
+  border-radius: 15%;
+  padding: 0 50px;
 }
 
 .img-wrapper {
@@ -266,7 +339,7 @@ background-image: url("https://images.squarespace-cdn.com/content/v1/58265288841
 }
 
 .about-you {
-  height: 150px;
+  height: 70px;
 }
 
 .user-info {
@@ -297,23 +370,29 @@ background-image: url("https://images.squarespace-cdn.com/content/v1/58265288841
 
 .image {
   margin-bottom: 20px;
-  width: 350px;
+  width: 300px;
+  border-radius: 10%;
+  border: 5px solid #0CCDDB;
+  box-shadow: 0 10px #666;
+  
 }
 
+.backgroundimg {
+    background-image: url("https://wprv.s3.eu-west-2.amazonaws.com/2016/08/the90s-500x272.jpg");
+    /* background-repeat: no-repeat; */
+     height: 1100px;
+    /* width: 1500px;  */
+    /* background-size: cover; */
+   
+  }
+
+  .profileimg {
+    background-image: url("https://preview.redd.it/yk760wzrq5241.jpg?width=640&crop=smart&auto=webp&s=93094b88f6d85a25ab2bb24573e575ffa518cb4d");
+  }
 
 
-.background {
-  background-image: url("https://wallpapersafari.com/image/throwback-backgrounds.jpg");
-  background-repeat: no-repeat;
-   height: 900px;
-  /* width: 1500px;  */
-  background-size: cover;
- 
-}
 
-
-
-
+/* Footer */
 
 footer {
   position: fixed;
@@ -326,7 +405,7 @@ footer {
 }
 
 .footerlinks {
-  color: white;
+  color: rgb(0, 0, 0);
   text-decoration: none;
   font-size: 23px;
   font-weight: bolder;
@@ -336,14 +415,14 @@ footer {
 }
 
 
-
 .navFooter {
   align-items: center;
   margin-bottom: 10px;
   min-height: 2em;
   font-family: 'Georgia';
-  background-color: #74c0c5;
+  background-color: #39beba;
 }
+
 
 
 

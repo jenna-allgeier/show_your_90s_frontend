@@ -62,7 +62,7 @@ const App = () => {
       <Navbar user={user} />
 
       <main>
-        <div className="background">
+        <div className="backgroundimg profileimg">
           <Routes>
             <Route index element={<Welcome />} />
             <Route path="profile/:userId" element={<UserProfile />} />
@@ -121,7 +121,7 @@ const App = () => {
       </main>
 
       <footer>
-        <nav className="navFooter">
+        <nav className="navFooter loginfooter">
           <Link className="links footerlinks" to="/">
             Home
           </Link>

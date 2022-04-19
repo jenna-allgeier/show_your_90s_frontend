@@ -17,3 +17,12 @@ export const GetPostByPk = async (id) => {
         throw error
     }
 }
+
+export const UpdatedPost = async (id) => {
+    try{
+        const updatedPost = await Client.put(`api/posts/${id}`, updatedPost)
+        
+    } catch (error) {
+        throw error
+    }
+}

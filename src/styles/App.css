@@ -224,7 +224,7 @@ background-image: url("https://images.squarespace-cdn.com/content/v1/58265288841
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
-  align-items: center;
+  align-items: center; 
 }
 
 .postDet {
@@ -322,7 +322,7 @@ background-image: url("https://images.squarespace-cdn.com/content/v1/58265288841
 }
 
 .backgroundimg {
-    background-image: url("https://wprv.s3.eu-west-2.amazonaws.com/2016/08/the90s-500x272.jpg");
+    background-image: url("https://imgur.com/a/UwaoQkw.jpg");
     background-repeat: no-repeat;
      height: 810px;
     /* width: 1500px;  */

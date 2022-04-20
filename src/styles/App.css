@@ -20,7 +20,7 @@
   flex-direction: row-reverse;
   justify-content: space-between;
   align-items: center;
-  padding: 5px;
+  padding: 0px;
   min-height: 2em;
   font-family: 'Georgia';
   background-color: #e994bf;
@@ -103,8 +103,19 @@
   animation-timing-function: ease-out;
 }
 
+@keyframes example {
+  0%   {color:rgb(65, 65, 179); box-shadow: 20px 20px 10px rgb(250, 250, 134); left:0px; top:0px;}
+  25%  {color:#e994bf; box-shadow: 20px 20px 10px rgb(236, 183, 6); left:200px; top:0px;}
+  50%  {color:#0CCDDB; box-shadow: 20px 20px 10px rgb(65, 65, 179); left:200px; top:200px;}
+  75%  {color:rgb(250, 250, 134); box-shadow: 20px 20px 10px #E994BF; left:0px; top:200px;}
+  100% {color:#0CCDDB; box-shadow: 20px 20px 10px rgb(236, 183, 6); left:0px; top:0px;}
+}
+
+.carimg {
+  height: 40px;
+}
+
 .welcome-btns {
-  margin: 50px;
   margin-left: 45px;
   padding: 20px;
   border: 1px solid #871CA1;
@@ -117,7 +128,33 @@
   box-shadow: 0 5px #999;
   transition-duration: 0.5s;
   opacity: 1;
+  position: relative;
+  animation-name: example;
+  animation-duration: 10s;
+  top: 10%;
+  animation-timing-function: ease-in-out;
 }
+
+.register-btn {
+  margin-left: 45px;
+  padding: 20px;
+  border: 1px solid #871CA1;
+  border-radius: 15px;
+  color: #0CCDDB;
+  background-color: white;
+  font-weight: bolder;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 30px;
+  box-shadow: 0 5px #999;
+  transition-duration: 0.5s;
+  opacity: 1;
+  position: relative;
+  animation-name: example;
+  animation-duration: 5s;
+  top: 10%;
+  animation-timing-function: ease-out;
+}
+
 
 .welcome-btns:hover {
   background-color: #0CCDDB;
@@ -270,7 +307,7 @@ background-image: url("https://images.squarespace-cdn.com/content/v1/58265288841
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
-  align-items: center;
+  align-items: center; 
 }
 
 .postDet {
@@ -426,9 +463,9 @@ background-image: url("https://images.squarespace-cdn.com/content/v1/58265288841
 }
 
 .backgroundimg {
-    background-image: url("https://wprv.s3.eu-west-2.amazonaws.com/2016/08/the90s-500x272.jpg");
-    /* background-repeat: no-repeat; */
-     height: 1100px;
+    background-image: url("https://i.imgur.com/yzEzwIK.png");
+    background-repeat: no-repeat;
+     height: 800px;
     /* width: 1500px;  */
     /* background-size: cover; */
    

@@ -12,6 +12,7 @@ const Register = () => {
     userName: '',
     about: '',
     email: '',
+    picture: '',
     password: '',
     confirmPassword: '',
   })
@@ -27,6 +28,7 @@ const Register = () => {
       lastName: registerValues.lastName,
       userName: registerValues.userName,
       about: registerValues.about,
+      picture: registerValues.picture,
       email: registerValues.email,
       password: registerValues.password
     })
@@ -35,6 +37,7 @@ const Register = () => {
       lastName: '',
       userName: '',
       about: '',
+      picture: '',
       email: '',
       password: '',
       confirmPassword: '',
@@ -80,6 +83,15 @@ const Register = () => {
           name="about"
           placeholder="about you!"
           value={registerValues.about}
+          required
+        />
+        <input
+          className="formInput"
+          type="text"
+          onChange={handleChange}
+          name="picture"
+          placeholder="profile pic!"
+          value={registerValues.picture}
           required
         />
         <input

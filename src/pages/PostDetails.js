@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import { DeletePost, GetPostByPk } from "../services/Posts";
 import { GetCommentsByPostPk } from "../services/Comments";
-import Comment from "../components/Comments";
+import Comments from "../components/Comments";
 import AddComment from "../components/AddComment";
 
 const PostDetails = (props) => {
@@ -74,10 +74,12 @@ const PostDetails = (props) => {
       </div>
       <div className="previous-comments">
         <h2>Previous Comments</h2>
-        <Comment
+        <Comments
           name={props.previousComments.name}
           description={props.previousComments.description}
           likes={props.previousComments.likes}
+          previousComments={props.previousComments}
+          setPreviousCommentsHandler={props.setPreviousCommentsHandler}
         />
       </div>
       <div className="footer" />

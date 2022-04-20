@@ -19,8 +19,8 @@ const AddComment = (props) => {
     setFormValues({ ...formValues, [e.target.name]: e.target.value });
   };
 
-  const submitData = async (e) => {
-    e.preventDefault();
+  const submitData = async () => {
+    // e.preventDefault();
     await CreateComment(userId, postId, {
       description: formValues.description,
       name: formValues.name,

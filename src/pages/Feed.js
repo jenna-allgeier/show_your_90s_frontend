@@ -2,14 +2,14 @@ import React, { useEffect } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import Post from "../components/Post";
 import { GetRecentPosts } from "../services/Posts";
-import Comment from "../components/Comments";
 import CreatePost from "../components/CreatePost";
 
+
 const Feed = (props) => {
+
   const renderPosts = async () => {
     const posts = await GetRecentPosts();
     props.setAllPostsHandler(posts);
-    // navigate(`/profile/${user.id}`);
   };
 
   useEffect(() => {
@@ -26,7 +26,12 @@ const Feed = (props) => {
       <div className="header" />
       <div className="feedPosts">
         <div className="createPost">
-        <CreatePost />
+        <CreatePost 
+          user={props.user}
+          setUser={props.setUser}
+          setUserHandler={props.setUserHandler}
+          toggleAuthenticated={props.toggleAuthenticated}
+        />
         </div>
       <div className="post">
         {props.posts.map((post) => {
@@ -49,16 +54,6 @@ const Feed = (props) => {
         })}
       </div>
       </div>
-      {/* <div className="previous-comments">
-        <h1>Previous Comments</h1>
-        {comments.map((comment) => {
-          return <Comment 
-          name={comment.name}
-          description={comment.description}
-          likes={comment.likes}
-          />
-        })}
-      </div> */}
     </div>
   );
 };

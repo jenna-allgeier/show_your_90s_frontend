@@ -11,7 +11,8 @@ const PostDetails = (props) => {
 
   postId = parseInt(postId);
   let userId = parseInt(props.post.userId);
-  // console.log(props.post);
+  console.log(props.user);
+  
   const renderPost = async () => {
     const currentPost = await GetPostByPk(postId);
     props.selectedPostHandler(currentPost);

@@ -27,9 +27,9 @@ export const AddPost = async (userId, data) => {
     }
 }
 
-export const UpdatedPost = async (id) => {
+export const UpdatedPost = async (postId, data) => {
     try{
-        const updatedPost = await Client.put(`api/posts/${id}`, updatedPost)
+        const updatedPost = await Client.put(`api/posts/${postId}`, data)
         
     } catch (error) {
         throw error

@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import Post from "../components/Post";
-import { GetPostByPk } from "../services/Posts";
+import { GetPostByPk, UpdatedPost } from "../services/Posts";
 import { GetCommentsByPostPk } from "../services/Comments";
 import Comment from "../components/Comments";
 import AddComment from "../components/AddComment";
@@ -10,8 +10,13 @@ const PostDetails = (props) => {
   let { postId } = useParams();
 
   postId = parseInt(postId);
-  let userId = parseInt(props.post.userId);
+  // let userId = parseInt(props.post.userId);
   console.log(props.user);
+  let navigate = useNavigate()
+
+  const navToUpdate = (postId) => {
+    navigate(`update-post/${postId}`)
+  }
   
   const renderPost = async () => {
     const currentPost = await GetPostByPk(postId);
@@ -30,15 +35,6 @@ const PostDetails = (props) => {
     renderPost();
     renderComments();
   }, []);
-  // const renderPost = async () => {
-  //     const currentPost =  await GetPostByPk(postId)
-  //     props.selectedPostHandler(currentPost)
-  // };
-
-  // const renderComments = async () => {
-  //     const currentComments = await GetCommentsByPostPk(postId)
-  //     props.setPreviousCommentsHandler(currentComments)
-  // }
 
   const submitData = (e) => {
     e.preventDefault();
@@ -57,9 +53,7 @@ const PostDetails = (props) => {
         </div>
       </div>
       <div className="button">
-        <Link to="update-post">
-          <button>Update</button>
-        </Link>
+          <button onClick={() => navToUpdate(postId)}>Update</button>
       </div>
       <div className="button">
         <Link to="feed">
@@ -90,19 +84,5 @@ const PostDetails = (props) => {
     </div>
   );
 };
-
-//       </div>
-//       <div className="previous-comments">
-//         <h1>Previous Comments</h1>
-//         {/* console.log(props.previousComment) */}
-//         <Comment
-//           name={props.previousComments.name}
-//           description={props.previousComments.description}
-//           likes={props.previousComments.likes}
-//         />
-//       </div>
-//     </div>
-//   );
-// };
 
 export default PostDetails;

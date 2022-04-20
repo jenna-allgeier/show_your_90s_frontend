@@ -13,7 +13,6 @@ const CreatePost = (props) => {
     });
     
     let userId = props.user.id;
-    console.log(props.user);
     
     const handlePost = (e) => {
     setFormValues({ ...formValues, [e.target.name]: e.target.value });

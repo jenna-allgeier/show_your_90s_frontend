@@ -232,6 +232,10 @@
   background-size: cover;
 }
 
+.welcome {
+  color: white;
+}
+
 .letsbe {
   display: flex;
   font-size: 80px;

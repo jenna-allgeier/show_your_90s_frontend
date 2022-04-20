@@ -28,7 +28,7 @@ const submitData = async (e) => {
       description: formValues.description,
       images: formValues.images
   });
-  navigate("feed")
+  navigate("/feed")
 };
   
   return (
@@ -41,7 +41,7 @@ const submitData = async (e) => {
             type="text"
             value={formValues.postName}
             onChange={handlePost}
-            name={"postName"}
+            name="postName"
             placeholder={"Change name"}
           />
           <input
@@ -49,7 +49,7 @@ const submitData = async (e) => {
             type="text"
             value={formValues.releaseDate}
             onChange={handlePost}
-            name={"releaseDate"}
+            name="releaseDate"
             placeholder={"Fix release date"}
           />
           <input
@@ -57,7 +57,7 @@ const submitData = async (e) => {
             type="text"
             value={formValues.description}
             onChange={handlePost}
-            name={"description"}
+            name="description"
             placeholder={"Change the description "}
           />
           <input
@@ -65,7 +65,7 @@ const submitData = async (e) => {
             type="text"
             value={formValues.images}
             onChange={handlePost}
-            name={"images"}
+            name="images"
             placeholder={"Change image"}
           />
           <button className="button">Submit Changes</button>

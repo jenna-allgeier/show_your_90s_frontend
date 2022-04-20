@@ -11,8 +11,8 @@ const Register = () => {
     lastName: '',
     userName: '',
     about: '',
-    picture: '',
     email: '',
+    picture: '',
     password: '',
     confirmPassword: '',
   })
@@ -42,7 +42,7 @@ const Register = () => {
       password: '',
       confirmPassword: '',
     })
-    navigate('/login')
+    navigate('/new-user')
   }
 
   return (

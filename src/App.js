@@ -8,6 +8,7 @@ import Welcome from "./pages/Welcome";
 import PostDetails from "./pages/PostDetails";
 import UpdatePost from "./components/UpdatePost";
 import CreatePost from "./components/CreatePost";
+import NewUserLogin from "./pages/NewUserLogin";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { CheckSession } from "./services/Auth";
@@ -71,6 +72,15 @@ const App = () => {
               path="login"
               element={
                 <LoginRegister
+                  setUser={setUser}
+                  toggleAuthenticated={toggleAuthenticated}
+                />
+              }
+            />
+            <Route
+              path="new-user"
+              element={
+                <NewUserLogin
                   setUser={setUser}
                   toggleAuthenticated={toggleAuthenticated}
                 />

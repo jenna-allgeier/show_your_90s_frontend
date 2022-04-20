@@ -8,11 +8,6 @@ import AddComment from "../components/AddComment";
 const PostDetails = (props) => {
   
   let { postId } = useParams();
-<<<<<<< HEAD
-  let navigate = useNavigate()
-
-=======
->>>>>>> main
   postId = parseInt(postId);
   let navigate = useNavigate()
 
@@ -58,13 +53,7 @@ const PostDetails = (props) => {
         </div>
       </div>
       <div className="button">
-<<<<<<< HEAD
-        
-          <button onClick = {() => updatePost()}>Update</button>
-        
-=======
           <button onClick={() => navToUpdate(postId)}>Update</button>
->>>>>>> main
       </div>
       <div className="button">
         <Link to="feed">

@@ -18,7 +18,7 @@ const App = () => {
   const [posts, setPosts] = useState([]);
   const [post, selectedPost] = useState([]);
   const [newPost, setNewPost] = useState({});
-  const [newComment, setNewComment] = useState([]);
+  const [newComment, setNewComment] = useState({});
   const [previousComments, setPreviousComments] = useState([]);
   const [selectPost, setSelectPost] = useState({});
 

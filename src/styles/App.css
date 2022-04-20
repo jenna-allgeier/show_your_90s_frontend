@@ -350,7 +350,7 @@ background-image: url("https://images.squarespace-cdn.com/content/v1/58265288841
   position: fixed;
   top: 25%;
   right: 3%;
-  height: 40px;
+  height: 350px;
 }
 .commentInput {
   margin-bottom: 20px;
@@ -481,7 +481,7 @@ footer {
   .previous-comments {
     color: white;
     background-color: #39beba;
-    width: 400px;
+    width: 300px;
     position: fixed;
     top: 25%;
     left: 5%;

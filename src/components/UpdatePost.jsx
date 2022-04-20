@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import { UpdatedPost } from "../services/Posts";
 
 
-const UpdatePost = (props) => {
+const UpdatePost = () => {
 
 const [formValues, setFormValues] = useState({
   postName: "",
@@ -13,9 +13,6 @@ const [formValues, setFormValues] = useState({
 });
 
 let { postId } = useParams()
-console.log(postId)
-
-// let userId = props.user.id;
 
 const handlePost = (e) => {
 setFormValues({ ...formValues, [e.target.name]: e.target.value });

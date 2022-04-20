@@ -1,7 +1,6 @@
 import React, { useEffect } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
-import Post from "../components/Post";
-import { GetPostByPk, UpdatedPost } from "../services/Posts";
+import { GetPostByPk } from "../services/Posts";
 import { GetCommentsByPostPk } from "../services/Comments";
 import Comment from "../components/Comments";
 import AddComment from "../components/AddComment";

@@ -33,7 +33,7 @@ const AddComment = (props) => {
   //     props.toggleAuthenticated(true);
   //   }, []);
   return (
-    <div>
+    <div className="add-comments">
       <form className="form" onSubmit={submitData}>
         <textarea
           className="commentInputDescription"

@@ -12,7 +12,8 @@ const AddComment = (props) => {
   let navigate = useNavigate();
   postId = parseInt(postId);
 
-  let userId = props.user.id;
+  let userId =parseInt(props.post.userId);
+  console.log(userId, 'this is userId')
   
   const handleComment = (e) => {
     setFormValues({ ...formValues, [e.target.name]: e.target.value });
@@ -32,10 +33,10 @@ const AddComment = (props) => {
   //     props.toggleAuthenticated(true);
   //   }, []);
   return (
-    <div>
-      <form onSubmit={submitData}>
-        <input
-          className="commentInput"
+    <div className="add-comments">
+      <form className="form" onSubmit={submitData}>
+        <textarea
+          className="commentInputDescription"
           type="text"
           value={formValues.description}
           onChange={handleComment}
@@ -52,7 +53,7 @@ const AddComment = (props) => {
           placeholder="name"
           required
         />
-        <button>add comment</button>
+        <button className="button" >add comment</button>
       </form>
     </div>
   );

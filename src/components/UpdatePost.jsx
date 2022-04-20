@@ -52,8 +52,8 @@ const submitData = async (e) => {
             name="releaseDate"
             placeholder={"Fix release date"}
           />
-          <input
-            className="formInput"
+          <textarea
+            className="formInput description"
             type="text"
             value={formValues.description}
             onChange={handlePost}

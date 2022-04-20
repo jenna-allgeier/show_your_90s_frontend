@@ -35,28 +35,33 @@ const PostDetails = (props) => {
     renderComments();
   }, []);
 
+  const updatePost = (post) => {
+    props.setSelectPost(post)
+    navigate("update-post")
+  }
+
   return (
     <div className="post-details">
       <div className="header" />
       <div className="post">
         <div className="detail-container">
           <h1>{props.post.postName}</h1>
-          <img src={props.post.images}></img>
+          <img className = "image" src={props.post.images}></img>
           <h4>{props.post.releaseDate}</h4>
           <p>{props.post.description}</p>
           <p>{props.post.likes}</p>
         </div>
       </div>
-      <div className="button">
-          <button onClick={() => navToUpdate(postId)}>Update</button>
+      <div >
+          <button className="button" onClick={() => navToUpdate(postId)}>Update</button>
       </div>
-      <div className="button">
+      <div >
         <Link to="feed">
-          <button onClick={() => deletePost(postId)}>Delete</button>
+          <button className="button" onClick={() => deletePost(postId)}>Delete</button>
         </Link>
       </div>
       <div className="add-comment">
-        <h2>Leave a Comment!</h2>
+        <h3 className="leaveComment">Leave a Comment!</h3>
         <AddComment
           post={props.post}
           selectedPost={props.selectedPost}

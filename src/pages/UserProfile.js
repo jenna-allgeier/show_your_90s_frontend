@@ -5,7 +5,7 @@ import { useParams } from "react-router-dom"
 const UserProfile = () => {
   let { id } = useParams()
   return (
-    <div className="background">
+    <div className="profile-background">
     {/* // <div className="profile-container">
     //   <div className="user-info">
     //     <h1>{user.firstName} {user.lastName}</h1>

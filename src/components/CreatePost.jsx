@@ -30,7 +30,8 @@ const CreatePost = (props) => {
 
     return (
         <div>
-            <form className="updateForm" onSubmit={submitData}>
+            <form className="createForm" onSubmit={submitData}>
+              <h3>Create Post</h3>
              <input
             className="formInput"
             type="text"

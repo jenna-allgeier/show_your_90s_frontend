@@ -35,3 +35,11 @@ export const UpdatedPost = async (postId, data) => {
         throw error
     }
 }
+
+export const DeletePost = async (postId) => {
+    try{
+        await Client.delete(`api/posts/${postId}`)
+    } catch (error) {
+        throw error
+    }
+}

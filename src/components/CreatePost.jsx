@@ -19,7 +19,7 @@ const CreatePost = (props) => {
     };
     
     const submitData = async (e) => {
-        e.preventDefault();
+        // e.preventDefault();
         await AddPost(userId, {
             postName: formValues.postName,
             releaseDate: formValues.releaseDate,

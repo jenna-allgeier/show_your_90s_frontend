@@ -1,9 +1,11 @@
 import { useState } from 'react';
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import { UpdatedPost } from "../services/Posts";
 
 
 const UpdatePost = () => {
+
+let navigate = useNavigate();
 
 const [formValues, setFormValues] = useState({
   postName: "",
@@ -26,6 +28,7 @@ const submitData = async (e) => {
       description: formValues.description,
       images: formValues.images
   });
+  navigate("feed")
 };
   
   return (

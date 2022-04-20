@@ -20,6 +20,7 @@ const App = () => {
   const [newPost, setNewPost] = useState({});
   const [newComment, setNewComment] = useState([]);
   const [previousComments, setPreviousComments] = useState([]);
+  const [selectPost, setSelectPost] = useState({});
 
   const checkToken = async () => {
     const user = await CheckSession();
@@ -115,11 +116,23 @@ const App = () => {
                   user={user}
                   toggleAuthenticated={toggleAuthenticated}
                   setUserHandler={setUserHandler}
+                  setSelectPost={setSelectPost}
                 />
               }
             />
             <Route path="create-post" element={<CreatePost />} />
-            <Route path="update-post" element={<UpdatePost />} />
+            <Route path="feed/post/:postId/update-post" element={
+            <UpdatePost 
+              post={post}
+              posts={posts}
+              selectPost={selectPost}
+              setSelectPost={setSelectPost}
+              setUser={setUser}
+              user={user}
+              toggleAuthenticated={toggleAuthenticated}
+              setUserHandler={setUserHandler}
+             
+            />} />
           </Routes>
         </div>
       </main>

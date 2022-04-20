@@ -8,6 +8,7 @@ import AddComment from "../components/AddComment";
 
 const PostDetails = (props) => {
   let { postId } = useParams();
+  let navigate = useNavigate()
 
   postId = parseInt(postId);
   let userId = parseInt(props.post.userId);
@@ -44,22 +45,27 @@ const PostDetails = (props) => {
     e.preventDefault();
   };
 
+  const updatePost = (post) => {
+    props.setSelectPost(post)
+    navigate("update-post")
+  }
+
   return (
     <div className="post-details">
       <div className="header" />
       <div className="post">
         <div className="detail-container">
           <h1>{props.post.postName}</h1>
-          <img src={props.post.images}></img>
+          <img className = "image" src={props.post.images}></img>
           <h4>{props.post.releaseDate}</h4>
           <p>{props.post.description}</p>
           <p>{props.post.likes}</p>
         </div>
       </div>
       <div className="button">
-        <Link to="update-post">
-          <button>Update</button>
-        </Link>
+        
+          <button onClick = {() => updatePost()}>Update</button>
+        
       </div>
       <div className="button">
         <Link to="feed">

@@ -31,6 +31,9 @@ const Feed = (props) => {
           setUser={props.setUser}
           setUserHandler={props.setUserHandler}
           toggleAuthenticated={props.toggleAuthenticated}
+          posts={props.posts}
+          setPosts={props.setPosts}
+          setNewPost={props.setNewPost}
         />
         </div>
       <div className="post">

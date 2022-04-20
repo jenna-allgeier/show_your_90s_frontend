@@ -28,9 +28,15 @@ const CreatePost = (props) => {
             images: formValues.images
         }
         console.log(banana)
-        await AddPost(userId, banana
+        let response = await AddPost(userId, banana
     );
-    };
+    props.posts.push(response.data);
+    props.setPosts(props.posts);
+    props.setNewPost({ postName: "", releaseDate: "", description: "", images: "" });
+    window.location.reload()  
+  };
+
+
 
     return (
         <div>

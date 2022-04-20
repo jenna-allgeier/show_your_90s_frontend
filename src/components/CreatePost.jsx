@@ -1,39 +1,68 @@
+import React, { useEffect, useState } from "react";
+import "../styles/App.css";
+import { AddPost } from "../services/Posts";
+
 
 const CreatePost = (props) => {
+
+    const [formValues, setFormValues] = useState({
+        postName: "",
+        releaseDate: "",
+        description: "",
+        images: ""
+    });
+    
+    let userId = props.user.id;
+    
+    const handlePost = (e) => {
+    setFormValues({ ...formValues, [e.target.name]: e.target.value });
+    };
+    
+    const submitData = async (e) => {
+        // e.preventDefault();
+        await AddPost(userId, {
+            postName: formValues.postName,
+            releaseDate: formValues.releaseDate,
+            description: formValues.description,
+            images: formValues.images
+        });
+    };
+
     return (
         <div>
-            <form className="updateForm">
+            <form className="createForm" onSubmit={submitData}>
+              <h3>Create Post</h3>
              <input
             className="formInput"
             type="text"
-            //   value={props.updateAWorkout.type}
-            //   onChange={props.handleUpdate}
+            value={formValues.postName}
+            onChange={handlePost}
             name={"postName"}
-            placeholder={"Change name"}
+            placeholder={"name"}
           />
           <input
             className="formInput"
             type="text"
-            //   value={props.updateAWorkout.duration}
-            //   onChange={props.handleUpdate}
-            name={"images"}
-            placeholder={"Change image"}
-          />
-          <input
-            className="formInput"
-            type="text"
-            //   value={props.updateAWorkout.description}
-            //   onChange={props.handleUpdate}
+            value={formValues.releaseDate}
+            onChange={handlePost}
             name={"releaseDate"}
-            placeholder={"Fix release date"}
+            placeholder={"release date"}
           />
           <input
             className="formInput"
             type="text"
-            //   value={props.updateAWorkout.description}
-            //   onChange={props.handleUpdate}
+            value={formValues.description}
+            onChange={handlePost}
             name={"description"}
-            placeholder={"Change the description "}
+            placeholder={"description"}
+          />
+          <input
+            className="formInput"
+            type="text"
+            value={formValues.images}
+            onChange={handlePost}
+            name={"images"}
+            placeholder={"image"}
           />
           <button className="button">Submit</button>
         </form>

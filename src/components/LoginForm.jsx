@@ -5,23 +5,23 @@ import { SignInUser } from "../services/Auth";
 
 const LoginForm = (props) => {
   let navigate = useNavigate();
-  
+
   const [formValues, setFormValues] = useState({
-    email: '',
-    password: '',
-  })
+    email: "",
+    password: "",
+  });
 
   const handleChange = (e) => {
-    setFormValues({ ...formValues, [e.target.name]: e.target.value })
-  }
+    setFormValues({ ...formValues, [e.target.name]: e.target.value });
+  };
 
   const submitData = async (e) => {
     e.preventDefault();
-    const payload = await SignInUser(formValues)
-    setFormValues({ email: '', password: '' })
-    props.setUser(payload)
-    props.toggleAuthenticated(true)
-    navigate('/feed')
+    const payload = await SignInUser(formValues);
+    setFormValues({ email: "", password: "" });
+    props.setUser(payload);
+    props.toggleAuthenticated(true);
+    navigate("/feed");
   };
 
   return (
@@ -46,7 +46,10 @@ const LoginForm = (props) => {
           placeholder={"password"}
           required
         />
-        <button className="button" disabled={!formValues.email || !formValues.password}>
+        <button
+          className="button"
+          disabled={!formValues.email || !formValues.password}
+        >
           Submit
         </button>
       </form>

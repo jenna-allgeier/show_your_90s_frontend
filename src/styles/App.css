@@ -39,6 +39,10 @@
 
 /* Welcome */
 
+.threeD {
+ 
+}
+
 .welcome {
   display: flex;
   flex-flow: column;
@@ -49,6 +53,14 @@
   margin: 0px;
 }
 
+@keyframes example {
+  0%   {color:rgb(65, 65, 179); text-shadow: 20px 20px 10px rgb(250, 250, 134); left:0px; top:0px;}
+  25%  {color:#e994bf; text-shadow: 20px 20px 10px rgb(236, 183, 6); left:200px; top:0px;}
+  50%  {color:#0CCDDB; text-shadow: 20px 20px 10px rgb(65, 65, 179); left:200px; top:200px;}
+  75%  {color:rgb(250, 250, 134); text-shadow: 20px 20px 10px #e994bf; left:0px; top:200px;}
+  100% {color:#0CCDDB; text-shadow: 20px 20px 10px rgb(236, 183, 6); left:0px; top:0px;}
+}
+
 .welcome-text {
   display: flex;
   flex-flow: column;
@@ -57,19 +69,38 @@
   align-items: center;
   align-content: center;
   margin: 90px 0 0 140px;
+ 
 }
 
 
 .show-your-90s {
   font-size: 80px;
+  color: #0CCDDB;
   margin-bottom: 5px;
   margin-right: 60px;
   font-family: 'Bradley Hand', cursive;
+  text-shadow: 20px 20px 10px rgb(236, 183, 6);
+  width: 700px;
+  height: 100px;
+  position: relative;
+  animation-name: example;
+  animation-duration: 10s;
+  top: 20px;
+  animation-timing-function: ease-in-out;
 }
 .welcomeMessage {
+  color: rgb(236, 183, 6);
   font-size: 50px;
   text-align: center;
-  font-family: Arial, Helvetica, sans-serif
+  font-family: Arial, Helvetica, sans-serif;
+  text-shadow: 20px 20px 10px rgb(6, 236, 217);
+  width: 1000px;
+  height: 100px;
+  position: relative;
+  animation-name: example;
+  animation-duration: 10s;
+  top: 30px;
+  animation-timing-function: ease-out;
 }
 
 @keyframes example {
@@ -157,6 +188,17 @@
   font-family: Arial, Helvetica, sans-serif;
   margin: 20px;
 }
+.createForm {
+  color: white;
+  display: flex;
+  flex-flow: row;
+  flex-flow: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 15px;
+}
+
 
 .formInput {
   padding: 10px;
@@ -227,6 +269,10 @@
   background-size: cover;
 }
 
+.welcome {
+  color: white;
+}
+
 .letsbe {
   display: flex;
   font-size: 80px;
@@ -253,8 +299,8 @@ background-image: url("https://images.squarespace-cdn.com/content/v1/58265288841
 }
 .createPost {
   position: fixed;
-  top: 100px;
-  right: 0;
+  bottom: 10px;
+  right: 10px;
 }
 
 .feedPosts {
@@ -293,10 +339,33 @@ background-image: url("https://images.squarespace-cdn.com/content/v1/58265288841
 }
 
 .posts {
-  background-color: rgb(255, 255, 255, 0.9);
-  border-radius: 10px;
+  background-color: rgb(250, 250, 134);
+  border-radius: 10%;
   width: 450px;
   margin: 20px;
+  box-shadow: 20px 30px rgb(88, 88, 1);
+  transition-duration: 0.5s;
+  opacity: 1;
+}
+.posts:hover {
+  opacity: 0.8;
+  box-shadow: 20px 15px rgb(88, 88, 1);
+  cursor: pointer;
+}
+.posts:active {
+  background-color: rgb(250, 250, 134);
+  color: grey;
+  box-shadow: 0 1px #666;
+  transform: translateY(4px);
+  opacity: 0.5;
+  cursor: grabbing;
+}
+
+.detail-container {
+  background-color:rgb(250, 250, 134) ;
+  border-radius: 15%;
+  padding: 0 50px;
+  width: 350px;
 }
 
 .img-wrapper {
@@ -307,6 +376,38 @@ background-image: url("https://images.squarespace-cdn.com/content/v1/58265288841
 .info-wrapper {
   margin-top: -20px;
   padding: 10px;
+}
+/* post detail */
+
+.leaveComment {
+  color: white;
+}
+.post-details {
+  align-items: center;
+  text-align: center;
+}
+.add-comment {
+  background-color: rgb(79, 98, 153);
+  position: fixed;
+  top: 25%;
+  right: 3%;
+  height: 350px;
+}
+.commentInput {
+  margin-bottom: 20px;
+  width: 200px;
+  height: 30px;
+  border: 2px solid red;
+  border-radius: 4px;
+  
+}
+
+.commentInputDescription {
+  margin-bottom: 20px;
+  width: 200px;
+  height: 100px;
+  border: 2px solid red;
+  border-radius: 4px;
 }
 
 /* Profile */
@@ -355,6 +456,9 @@ background-image: url("https://images.squarespace-cdn.com/content/v1/58265288841
 .image {
   margin-bottom: 20px;
   width: 300px;
+  border-radius: 10%;
+  border: 5px solid #0CCDDB;
+  box-shadow: 0 10px #666;
   
 }
 
@@ -363,7 +467,7 @@ background-image: url("https://images.squarespace-cdn.com/content/v1/58265288841
     background-repeat: no-repeat;
      height: 800px;
     /* width: 1500px;  */
-    background-size: cover;
+    /* background-size: cover; */
    
   }
 
@@ -403,8 +507,42 @@ footer {
   font-family: 'Georgia';
   background-color: #39beba;
 }
+/* :-moz-full-screen(min-width: 1000px) {
+  .previous-comments {
+    color: white;
+    background-color: #39beba;
+    width: 250px;
+    position: fixed;
+    top: 25%;
+    left: 10px;
+  }
+} */
 
 
+  .previous-comments {
+    color: white;
+    background-color: #39beba;
+    width: 300px;
+    position: fixed;
+    top: 25%;
+    left: 5%;
+  }
 
+
+.comments {
+  background-color: white;
+  color: #666;
+  border: 2px solid sandybrown;
+  margin: 5px;
+  overflow-y: scroll;
+  height: 400px;
+}
+.comment {
+  border-bottom: 1px solid sandybrown;
+}
+
+.description {
+  height: 100px;
+}
 
  

@@ -21,15 +21,12 @@ const CreatePost = (props) => {
     
     const submitData = async (e) => {
         e.preventDefault();
-        const banana = {
+        await AddPost(userId, {
             postName: formValues.postName,
             releaseDate: formValues.releaseDate,
             description: formValues.description,
             images: formValues.images
-        }
-        console.log(banana)
-        await AddPost(userId, banana
-    );
+        });
     };
 
     return (

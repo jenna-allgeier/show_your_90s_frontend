@@ -2,16 +2,23 @@ import React from "react";
 import "../styles/App.css";
 import { useNavigate } from "react-router-dom";
 
-const Comment = (props) => {
+const Comments = (props) => {
+  console.log(props.previousComments)
   return (
     <div>
       <div className="previous-comments">
-        <h2>{props.name}</h2>
-        <p>{props.description}</p>
-        <h3>{props.likes}</h3>
+      {props.previousComments.map((comment) => {
+        return (
+        <div>
+        <h2>{comment.name}</h2>
+        <p>{comment.description}</p>
+        <h3>{comment.likes}</h3>
+        </div>
+      )})}
       </div>
+      
     </div>
   );
 };
 
-export default Comment;
+export default Comments;

@@ -18,8 +18,9 @@ const App = () => {
   const [posts, setPosts] = useState([]);
   const [post, selectedPost] = useState([]);
   const [newPost, setNewPost] = useState({});
-  const [newComment, setNewComment] = useState([]);
+  const [newComment, setNewComment] = useState({});
   const [previousComments, setPreviousComments] = useState([]);
+  const [selectPost, setSelectPost] = useState({});
 
   const checkToken = async () => {
     const user = await CheckSession();
@@ -115,6 +116,7 @@ const App = () => {
                   user={user}
                   toggleAuthenticated={toggleAuthenticated}
                   setUserHandler={setUserHandler}
+                  setSelectPost={setSelectPost}
                 />
               }
             />

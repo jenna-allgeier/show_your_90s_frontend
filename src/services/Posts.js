@@ -18,6 +18,15 @@ export const GetPostByPk = async (id) => {
     }
 }
 
+export const AddPost = async (userId, data) => {
+    try{
+        const res = await Client.post(`api/posts/${userId}`, data)
+        return res.data
+    } catch (error) {
+        throw error
+    }
+}
+
 export const UpdatedPost = async (id) => {
     try{
         const updatedPost = await Client.put(`api/posts/${id}`, updatedPost)

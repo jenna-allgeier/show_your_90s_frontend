@@ -14,7 +14,7 @@ const AddComment = (props) => {
 
   let userId = props.user.id;
   console.log(props.user);
-  //   console.log(userId);
+  
   const handleComment = (e) => {
     setFormValues({ ...formValues, [e.target.name]: e.target.value });
   };

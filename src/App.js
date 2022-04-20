@@ -79,6 +79,10 @@ const App = () => {
               path="feed"
               element={
                 <Feed
+                  user={user}
+                  setUser={setUser}
+                  toggleAuthenticated={toggleAuthenticated}
+                  setUserHandler={setUserHandler}
                   posts={posts}
                   setPosts={setPosts}
                   newPost={newPost}

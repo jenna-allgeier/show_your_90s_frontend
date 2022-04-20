@@ -52,16 +52,16 @@ const PostDetails = (props) => {
           <p>{props.post.likes}</p>
         </div>
       </div>
-      <div className="button">
-          <button onClick={() => navToUpdate(postId)}>Update</button>
+      <div >
+          <button className="button" onClick={() => navToUpdate(postId)}>Update</button>
       </div>
-      <div className="button">
+      <div >
         <Link to="feed">
-          <button onClick={() => deletePost(postId)}>Delete</button>
+          <button className="button" onClick={() => deletePost(postId)}>Delete</button>
         </Link>
       </div>
       <div className="add-comment">
-        <h2>Leave a Comment!</h2>
+        <h3 className="leaveComment">Leave a Comment!</h3>
         <AddComment
           post={props.post}
           selectedPost={props.selectedPost}

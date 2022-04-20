@@ -34,9 +34,9 @@ const AddComment = (props) => {
   //   }, []);
   return (
     <div>
-      <form onSubmit={submitData}>
-        <input
-          className="commentInput"
+      <form className="form" onSubmit={submitData}>
+        <textarea
+          className="commentInputDescription"
           type="text"
           value={formValues.description}
           onChange={handleComment}
@@ -53,7 +53,7 @@ const AddComment = (props) => {
           placeholder="name"
           required
         />
-        <button>add comment</button>
+        <button className="button" >add comment</button>
       </form>
     </div>
   );

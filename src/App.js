@@ -121,18 +121,15 @@ const App = () => {
               }
             />
             <Route path="create-post" element={<CreatePost />} />
-            <Route path="feed/post/:postId/update-post" element={
-            <UpdatePost 
-              post={post}
-              posts={posts}
-              selectPost={selectPost}
-              setSelectPost={setSelectPost}
-              setUser={setUser}
-              user={user}
-              toggleAuthenticated={toggleAuthenticated}
-              setUserHandler={setUserHandler}
-             
-            />} />
+            <Route path="feed/post/:postId/update-post/:postId" 
+            element={
+              <UpdatePost 
+                post={post}
+                selectedPost={selectedPost}
+                selectedPostHandler={selectedPostHandler}
+              />
+            } 
+          />
           </Routes>
         </div>
       </main>

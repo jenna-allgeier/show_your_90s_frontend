@@ -1,45 +1,36 @@
-// import { UpdatedPost } from "../services/Posts";
-import { useParams } from "react-router-dom";
-import Client from "../services/api";
-
-const UpdatePost = (props) => {
-  let { postId } = useParams();
-  postId = parseInt(postId);
-  let selectedPost = props.selectPost
-  let setSelectedPost = props.setSelectPost
+import { useState } from 'react';
+import { useParams, useNavigate } from "react-router-dom";
+import { UpdatedPost } from "../services/Posts";
 
 
-  let userId = props.user.id;
-  console.log(props.user);
+const UpdatePost = () => {
+
+let navigate = useNavigate();
+
+const [formValues, setFormValues] = useState({
+  postName: "",
+  releaseDate: "",
+  description: "",
+  images: ""
+});
+
+let { postId } = useParams()
+
+const handlePost = (e) => {
+setFormValues({ ...formValues, [e.target.name]: e.target.value });
+};
+
+const submitData = async (e) => {
+  e.preventDefault();
+  await UpdatedPost(postId, {
+      postName: formValues.postName,
+      releaseDate: formValues.releaseDate,
+      description: formValues.description,
+      images: formValues.images
+  });
+  navigate("/feed")
+};
   
-
-  const submitData = async (e) => {
-    e.preventDefault();
-    const updatePost =(userId, {
-      ...selectedPost,
-    }) ;
-
-    const updatedPost = await Client.put(
-      `api/posts/${selectedPost.id}`,
-      updatePost
-    );
-      console.log(updatePost, 'this is updatedpost')
-    const toChangePost = props.posts.find(
-      (post) => props.posts.id === updatedPost.data.id
-    );
-    props.posts.splice(toChangePost, 1, updatePost);
-    setSelectedPost({
-      postName: "",
-      images: "",
-      description: "",
-      releaseDate: "",
-    });
-  };
-
-  const handleUpdate = (e) => {
-    setSelectedPost({ ...selectedPost, [e.target.name]: e.target.value });
-  };
-
   return (
     <div>
       <div className="postDet">
@@ -48,36 +39,36 @@ const UpdatePost = (props) => {
           <input
             className="formInput"
             type="text"
-              value={selectedPost.postName}
-              onChange={handleUpdate}
-            name={"postName"}
+            value={formValues.postName}
+            onChange={handlePost}
+            name="postName"
             placeholder={"Change name"}
           />
           <input
             className="formInput"
             type="text"
-            value={selectedPost.images}
-            onChange={handleUpdate}
-            name={"images"}
-            placeholder={"Change image"}
-          />
-          <input
-            className="formInput"
-            type="text"
-            value={selectedPost.releaseDate}
-            onChange={handleUpdate}
-            name={"releaseDate"}
+            value={formValues.releaseDate}
+            onChange={handlePost}
+            name="releaseDate"
             placeholder={"Fix release date"}
           />
           <input
             className="formInput"
             type="text"
-            value={selectedPost.description}
-            onChange={handleUpdate}
-            name={"description"}
+            value={formValues.description}
+            onChange={handlePost}
+            name="description"
             placeholder={"Change the description "}
           />
-          <button className="button">Submit</button>
+          <input
+            className="formInput"
+            type="text"
+            value={formValues.images}
+            onChange={handlePost}
+            name="images"
+            placeholder={"Change image"}
+          />
+          <button className="button">Submit Changes</button>
         </form>
       </div>
     </div>

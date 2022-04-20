@@ -13,30 +13,20 @@ const CreatePost = (props) => {
     });
     
     let userId = props.user.id;
-    console.log(props.user);
     
     const handlePost = (e) => {
     setFormValues({ ...formValues, [e.target.name]: e.target.value });
     };
     
     const submitData = async (e) => {
-        e.preventDefault();
-        const banana = {
+        // e.preventDefault();
+        await AddPost(userId, {
             postName: formValues.postName,
             releaseDate: formValues.releaseDate,
             description: formValues.description,
             images: formValues.images
-        }
-        console.log(banana)
-        let response = await AddPost(userId, banana
-    );
-    props.posts.push(response.data);
-    props.setPosts(props.posts);
-    props.setNewPost({ postName: "", releaseDate: "", description: "", images: "" });
-    window.location.reload()  
-  };
-
-
+        });
+    };
 
     return (
         <div>

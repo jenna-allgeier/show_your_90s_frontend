@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { Link, useNavigate, useParams } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import Post from "../components/Post";
 import { GetRecentPosts } from "../services/Posts";
 import CreatePost from "../components/CreatePost";

@@ -24,12 +24,12 @@ let navigate = useNavigate();
             setUserProfileHandler={props.setUserProfileHandler}
           />
           <div className="user-posts">
-            {/* <div className="post">
+            <div className="post">
               {props.userProfile.posts.map((post) => {
                 return (
                   <div
                     className="post"
-                    key={post._id}
+                    key={post.id}
                     onClick={() => linkToPostDetails(post)}
                   >
                     {props.userProfile.posts.length ? 
@@ -48,7 +48,7 @@ let navigate = useNavigate();
                   </div>
                 );
               })}
-            </div> */}
+            </div>
           </div>
         </div>
       </div>

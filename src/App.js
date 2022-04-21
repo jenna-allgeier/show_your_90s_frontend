@@ -26,6 +26,8 @@ const App = () => {
 
   console.log(user)
 
+  let userId = user.id
+
   const checkToken = async () => {
     const user = await CheckSession();
     setUser(user);
@@ -75,9 +77,10 @@ const App = () => {
         <div className="profileimg">
           <Routes>
             <Route index element={<Welcome />} />
-            <Route path="profile/:userId" 
+            <Route path={`profile/${userId}`}
               element={
                 <UserProfile
+                  userId={userId}
                   user={user}
                   userProfile={userProfile}
                   setUserProfile={setUserProfile}

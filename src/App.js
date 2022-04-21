@@ -26,8 +26,6 @@ const App = () => {
   const [selectPost, setSelectPost] = useState({});
 
   console.log(userProfile)
-  
-  console.log(process.env.NODE_ENV)
 
   let userId = user.id
 

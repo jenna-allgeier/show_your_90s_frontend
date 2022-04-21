@@ -32,7 +32,6 @@ let navigate = useNavigate();
                     key={post.id}
                     onClick={() => linkToPostDetails(post)}
                   >
-                    {props.userProfile.posts.length ? 
                     <UserPosts
                       post={post.id}
                       name={post.postName}
@@ -44,7 +43,7 @@ let navigate = useNavigate();
                       user={props.user}
                       userProfile={props.userProfile}
                       setUserProfileHandler={props.setUserProfileHandler}
-                    /> : <h4>No posts yet!</h4>}
+                    />
                   </div>
                 );
               })}

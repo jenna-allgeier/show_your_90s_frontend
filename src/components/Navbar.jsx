@@ -11,10 +11,8 @@ const Navbar = (props) => {
                 <Link className="links homeLink" to='/'>Home</Link>
                 <Link className="links loginLink" to='/login'>Login/Register</Link>
                 <Link className="links feedLink" to='/feed'>Feed</Link>
-
                 {/* { props.user.length ?  */}
                 <Link className= "links profileLink" to={`/profile/${userId}`}>Profile</Link>
-
             </nav>
         </header>
     )

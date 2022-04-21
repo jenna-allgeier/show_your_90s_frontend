@@ -53,7 +53,7 @@ const submitData = async (e) => {
             placeholder={"Fix release date"}
           />
           <textarea
-            className="formInput description"
+            className="form-description"
             type="text"
             value={formValues.description}
             onChange={handlePost}

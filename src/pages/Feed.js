@@ -25,8 +25,7 @@ const Feed = (props) => {
     <div className="feed">
       <div className="header" />
       <div className="feedPosts">
-        <div className="createPost">
-          <nav>
+        <div className="createPost">  
         <CreatePost 
           user={props.user}
           setUser={props.setUser}
@@ -36,7 +35,6 @@ const Feed = (props) => {
           setPosts={props.setPosts}
           setNewPost={props.setNewPost}
         />
-        </nav>
         </div>
       <div className="post">
         {props.posts.map((post) => {

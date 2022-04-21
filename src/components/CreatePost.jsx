@@ -31,7 +31,7 @@ const CreatePost = (props) => {
     return (
         <div>
             <form className="createForm" onSubmit={submitData}>
-              <h3>Create Post</h3>
+              <h1 className="add" >+</h1>
              <input
             className="formInput"
             type="text"
@@ -48,8 +48,8 @@ const CreatePost = (props) => {
             name={"releaseDate"}
             placeholder={"release date"}
           />
-          <input
-            className="formInput"
+          <textarea
+            className="description"
             type="text"
             value={formValues.description}
             onChange={handlePost}

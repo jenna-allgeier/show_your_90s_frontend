@@ -20,7 +20,7 @@
   flex-direction: row-reverse;
   justify-content: space-between;
   align-items: center;
-  padding: 5px;
+  padding: 0px;
   min-height: 2em;
   font-family: 'Georgia';
   background-color: #e994bf;
@@ -39,9 +39,6 @@
 
 /* Welcome */
 
-.threeD {
- 
-}
 
 .welcome {
   display: flex;
@@ -103,8 +100,51 @@
   animation-timing-function: ease-out;
 }
 
+@keyframes example {
+  0%   {color:rgb(65, 65, 179); box-shadow: 20px 20px 10px rgb(250, 250, 134); left:0px; top:0px;}
+  20%  {color:#e994bf; box-shadow: 20px 20px 10px rgb(236, 183, 6); transform: rotate(600deg); left:300px; top:-1400px;}
+  40%  {color:#0CCDDB; box-shadow: 20px 20px 10px rgb(65, 65, 179); left:500px; top:-900px;}
+  65%  {color:rgb(250, 250, 134); box-shadow: 20px 20px 10px #E994BF; transform: rotate(20deg); left:100px; top:-100px;}
+  80% {color:#0CCDDB; box-shadow: 20px 20px 10px rgb(236, 183, 6); left:100px; top:-150px;}
+  100% {color:#0CCDDB; box-shadow: 20px 20px 10px rgb(236, 183, 6); left:0px; top:-150px;}
+}
+
+@keyframes car {
+  0%   { box-shadow: 5px 5px 10px rgb(236, 183, 6); height: 75px; right:-10%; top:-10%;}
+ /* 25%  { box-shadow: 20px 20px 20px rgb(236, 183, 6); height: 200px; right:30%; top:20%;}
+  50%  { box-shadow: 20px 20px 30px rgb(65, 65, 179);  height: 400px; right:50%; top:30%;} */
+  75%  { box-shadow: 1000px 1px 1000px rgb(250, 250, 134); transform: rotate(50deg); height: 1000px; right:120%; top:50%;}
+  100% { box-shadow: 10px 1px 150px white; height: 1000px; right:120%; top:50%;} 
+}
+
+.carimg {
+  height: 0px;
+  position: relative;
+  animation-name: car;
+  animation-duration: 3s;
+  top: 10%;
+  
+  animation-timing-function: ease-in-out;
+}
+
+/* @keyframes boomBox {
+  0%   { box-shadow: 5px 5px 10px rgb(236, 183, 6); right:0%; top:20%;}
+  45%  {color:rgb(250, 250, 134); box-shadow: 20px 20px 10px #E994BF; transform: rotate(2000deg); left:10%; top:20%;}
+  75%  { box-shadow: 1000px 1px 1000px rgb(250, 250, 134); transform: rotate(500deg);  right:120%; top:50%;}
+  100% { box-shadow: 10px 1px 150px white;  right:120%; top:50%;} 
+}
+
+.boomBox {
+  position: relative;
+  height: 250px;
+  top:27%;
+  left:40%;
+  animation-name: boomBox;
+  animation-duration: 10s;
+  animation-timing-function: ease-out;
+} */
+
 .welcome-btns {
-  margin: 50px;
   margin-left: 45px;
   padding: 20px;
   border: 1px solid #871CA1;
@@ -117,7 +157,33 @@
   box-shadow: 0 5px #999;
   transition-duration: 0.5s;
   opacity: 1;
+  position: relative;
+  animation-name: example;
+  animation-duration: 10s;
+  top: -200%;
+  animation-timing-function: ease-in-out;
 }
+
+.register-btn {
+  margin-left: 45px;
+  padding: 20px;
+  border: 1px solid #871CA1;
+  border-radius: 15px;
+  color: #0CCDDB;
+  background-color: white;
+  font-weight: bolder;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 30px;
+  box-shadow: 0 5px #999;
+  transition-duration: 0.5s;
+  opacity: 1;
+  position: relative;
+  animation-name: example;
+  animation-duration: 10s;
+  top: -200%;
+  animation-timing-function: ease-out;
+}
+
 
 .welcome-btns:hover {
   background-color: #0CCDDB;
@@ -130,6 +196,19 @@
   transform: translateY(4px);
   opacity: 0.5;
 }
+
+.register-btn:hover {
+  background-color: #0CCDDB;
+  color: white;
+}
+.register-btn:active {
+  background-color: rgb(250, 250, 134);
+  color: grey;
+  box-shadow: 0 1px #666;
+  transform: translateY(4px);
+  opacity: 0.5;
+}
+
 
 /* Login/Register */
 
@@ -164,6 +243,16 @@
 
 
 .formInput {
+  padding: 10px;
+  margin: 8px;
+  width: 300px;
+  border-color: #0CCDDB;
+  text-align: start;
+  padding-left: 12px;
+}
+
+.description {
+  height: 100px;
   padding: 10px;
   margin: 8px;
   width: 300px;
@@ -232,6 +321,11 @@
   background-size: cover;
 }
 
+.welcome {
+  color: white;
+  
+}
+
 .letsbe {
   display: flex;
   font-size: 80px;
@@ -258,15 +352,38 @@ background-image: url("https://images.squarespace-cdn.com/content/v1/58265288841
 }
 .createPost {
   position: fixed;
-  bottom: 10px;
-  right: 10px;
+  top: 80%;
+  left: 93%;
+  transition-duration: 0.1;
 }
+
+.createPost:hover {
+  margin: 100px;
+  top: 28%;
+  left: 67%;
+  background-color: rgba(100, 151, 180, 0.644);
+}
+
+.add {
+  background-color: #E994BF;
+  padding: 5px 10px;
+  border-radius: 100%;
+  box-shadow:  10px 10px #553444;
+  transition-duration: .5s;
+  font-size: xxx-large;
+}
+
+/* .add:hover {
+
+  box-shadow: 5px 5px #553444;
+  cursor: pointer;
+} */
 
 .feedPosts {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
-  align-items: center;
+  align-items: center; 
 }
 
 .postDet {
@@ -297,6 +414,7 @@ background-image: url("https://images.squarespace-cdn.com/content/v1/58265288841
   margin-top: -5px;
 }
 
+
 .posts {
   background-color: rgb(250, 250, 134);
   border-radius: 10%;
@@ -310,6 +428,9 @@ background-image: url("https://images.squarespace-cdn.com/content/v1/58265288841
   opacity: 0.8;
   box-shadow: 20px 15px rgb(88, 88, 1);
   cursor: pointer;
+  width: 470px;
+  transform: rotate(5deg);
+
 }
 .posts:active {
   background-color: rgb(250, 250, 134);
@@ -318,10 +439,14 @@ background-image: url("https://images.squarespace-cdn.com/content/v1/58265288841
   transform: translateY(4px);
   opacity: 0.5;
   cursor: grabbing;
+  transform: rotate(600deg); 
+  width: 800px;
+ 
 }
 
 .detail-container {
   background-color:rgb(250, 250, 134) ;
+  box-shadow: 20px 30px rgb(88, 88, 1);
   border-radius: 15%;
   padding: 0 50px;
   width: 350px;
@@ -351,6 +476,8 @@ background-image: url("https://images.squarespace-cdn.com/content/v1/58265288841
   top: 25%;
   right: 3%;
   height: 350px;
+  box-shadow: 20px 30px rgb(28, 33, 63);
+  border-radius: 25px;
 }
 .commentInput {
   margin-bottom: 20px;
@@ -404,8 +531,9 @@ background-image: url("https://images.squarespace-cdn.com/content/v1/58265288841
   border-radius: 8px;
 }
 
-.description {
+.form-description {
   color: #871CA1;
+  height: 100px;
 }
 
 .title-date {
@@ -422,17 +550,25 @@ background-image: url("https://images.squarespace-cdn.com/content/v1/58265288841
 }
 
 .backgroundimg {
-    background-image: url("https://wprv.s3.eu-west-2.amazonaws.com/2016/08/the90s-500x272.jpg");
-    /* background-repeat: no-repeat; */
-     height: 1100px;
-    /* width: 1500px;  */
-    /* background-size: cover; */
+    background-image: url("https://i.imgur.com/yzEzwIK.png");
+    background-repeat: no-repeat;
+     /* height: 800px; */
+     padding-top: 32px;
+   /* Full height */
+  
+   height: 800px;
+
+  
+ 
    
   }
 
   .profileimg {
     background-image: url("https://preview.redd.it/yk760wzrq5241.jpg?width=640&crop=smart&auto=webp&s=93094b88f6d85a25ab2bb24573e575ffa518cb4d");
+    background-size: contain;
+    height: 1000px;
   }
+
 
 
 
@@ -480,27 +616,37 @@ footer {
 
   .previous-comments {
     color: white;
-    background-color: #39beba;
+    background-color: rgb(79, 98, 153);
     width: 300px;
     position: fixed;
     top: 25%;
     left: 5%;
+    box-shadow: 20px 30px rgb(28, 33, 63);
+    border-radius: 25px;
+  }
+  .previous-comments:hover {
+    width: 800px;
+    transition-duration: 0.5s;
   }
 
 
 .comments {
-  background-color: white;
+  background-color: #e994bf;
   color: #666;
   border: 2px solid sandybrown;
   margin: 5px;
   overflow-y: scroll;
   height: 400px;
+  scrollbar-color: #39beba;
+  scrollbar-track-color: #39beba;
 }
 .comment {
   border-bottom: 1px solid sandybrown;
 }
 
-.description {
+
+.form-description {
+  color: #871CA1;
   height: 100px;
 }
 

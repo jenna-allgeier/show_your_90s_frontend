@@ -74,7 +74,9 @@ const App = () => {
 
   return (
     <div>
-      <Navbar user={user} />
+      <Navbar 
+       userProfile={userProfile}
+      user={user} />
 
       <main>
         <div className="profileimg">

@@ -2,16 +2,16 @@ import Client from './api'
 
 export const GetAllUsers = async () => {
   try {
-    const res = await Client.get('/users')
+    const res = await Client.get('api/users')
     return res.data
   } catch (error) {
     throw error
   }
 }
 
-export const GetUserByPk = async () => {
+export const GetUserProfile = async (userId) => {
     try {
-      const res = await Client.getbyPk('/users')
+      const res = await Client.get(`api/users/${userId}`)
       return res.data
     } catch (error) {
       throw error

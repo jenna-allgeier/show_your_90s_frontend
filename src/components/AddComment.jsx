@@ -13,7 +13,6 @@ const AddComment = (props) => {
   postId = parseInt(postId);
 
   let userId =parseInt(props.post.userId);
-  console.log(userId, 'this is userId')
   
   const handleComment = (e) => {
     setFormValues({ ...formValues, [e.target.name]: e.target.value });

@@ -26,8 +26,6 @@ const App = () => {
   const [selectPost, setSelectPost] = useState({});
 
   console.log(userProfile)
-  
-  console.log(process.env.NODE_ENV)
 
   let userId = user.id
 
@@ -74,7 +72,9 @@ const App = () => {
 
   return (
     <div>
-      <Navbar user={user} />
+      <Navbar 
+       userProfile={userProfile}
+      user={user} />
 
       <main>
         <div className="profileimg">

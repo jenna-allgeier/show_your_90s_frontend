@@ -24,7 +24,7 @@ let navigate = useNavigate();
             setUserProfileHandler={props.setUserProfileHandler}
           />
           <div className="user-posts">
-            <div className="post">
+            {/* <div className="post">
               {props.userProfile.posts.map((post) => {
                 return (
                   <div
@@ -47,7 +47,7 @@ let navigate = useNavigate();
                   </div>
                 );
               })}
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

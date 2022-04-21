@@ -24,6 +24,8 @@ const App = () => {
   const [previousComments, setPreviousComments] = useState([]);
   const [selectPost, setSelectPost] = useState({});
 
+  console.log(user)
+
   const checkToken = async () => {
     const user = await CheckSession();
     setUser(user);

@@ -1,6 +1,7 @@
 import Axios from "axios";
 
-export const BASE_URL = "http://localhost:3002";
+export const BASE_URL = process.env.NODE_ENV === 'production' ? 'https://nineties-api.herokuapp.com' : 'http://localhost:3002';
+
 
 const Client = Axios.create({ baseURL: BASE_URL });
 

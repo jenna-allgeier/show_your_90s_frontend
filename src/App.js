@@ -77,7 +77,7 @@ const App = () => {
       user={user} />
 
       <main>
-        <div className="profileimg">
+        <div className="">
           <Routes>
             <Route index element={<Welcome />} />
             <Route path={`profile/${userId}`}
@@ -173,10 +173,13 @@ const App = () => {
             } 
           />
           </Routes>
+          <img className="boomBox" src="http://assets.stickpng.com/images/5c8662cfc115b30282adb5b3.png" ></img>
         </div>
+        
       </main>
 
       <footer>
+        
         <nav className="navFooter loginfooter">
           <Link className="links footerlinks" to="/">
             Home

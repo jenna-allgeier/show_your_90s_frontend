@@ -18,7 +18,7 @@ const UserInfo = (props) => {
     }, [])
 
     return (
-        <div>
+        <div className="profileimg">
             <div className="profile-info">
                 <h1>{props.userProfile.firstName} {props.userProfile.lastName}</h1>
                 <img className="profile-pic" src={props.userProfile.picture} alt="Profile Pic" />

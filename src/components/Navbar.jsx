@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 
 const Navbar = (props) => {
 
+    let userId = props.user.id
+
     return (
         <header className="nav-header">
             <nav>
@@ -10,7 +12,7 @@ const Navbar = (props) => {
                 <Link className="links loginLink" to='/login'>Login/Register</Link>
                 <Link className="links feedLink" to='/feed'>Feed</Link>
                 { props.user ? 
-                <Link className= "links profileLink" to='/profile/:userId'>Profile</Link>
+                <Link className= "links profileLink" to={`/profile/${userId}`}>Profile</Link>
                 : ""}
             </nav>
         </header>

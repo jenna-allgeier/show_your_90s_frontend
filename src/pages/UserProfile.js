@@ -24,7 +24,7 @@ let navigate = useNavigate();
             setUserProfileHandler={props.setUserProfileHandler}
           />
           <div className="user-posts">
-            <div className="post">
+            {/* <div className="post">
               {props.userProfile.posts.map((post) => {
                 return (
                   <div
@@ -32,7 +32,6 @@ let navigate = useNavigate();
                     key={post.id}
                     onClick={() => linkToPostDetails(post)}
                   >
-                    {props.userProfile.posts.length ? 
                     <UserPosts
                       post={post.id}
                       name={post.postName}
@@ -44,11 +43,11 @@ let navigate = useNavigate();
                       user={props.user}
                       userProfile={props.userProfile}
                       setUserProfileHandler={props.setUserProfileHandler}
-                    /> : <h4>No posts yet!</h4>}
+                    />
                   </div>
                 );
               })}
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

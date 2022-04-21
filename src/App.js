@@ -9,6 +9,7 @@ import PostDetails from "./pages/PostDetails";
 import UpdatePost from "./components/UpdatePost";
 import CreatePost from "./components/CreatePost";
 import NewUserLogin from "./pages/NewUserLogin";
+import Logout from "./pages/Logout";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { CheckSession } from "./services/Auth";
@@ -24,7 +25,7 @@ const App = () => {
   const [previousComments, setPreviousComments] = useState([]);
   const [selectPost, setSelectPost] = useState({});
 
-  console.log(process.env.NODE_ENV)
+  console.log(userProfile)
 
   let userId = user.id
 
@@ -93,6 +94,16 @@ const App = () => {
               path="login"
               element={
                 <LoginRegister
+                  setUser={setUser}
+                  toggleAuthenticated={toggleAuthenticated}
+                  setUserProfileHandler={setUserProfileHandler}
+                />
+              }
+            />
+            <Route
+              path="logout"
+              element={
+                <Logout
                   setUser={setUser}
                   toggleAuthenticated={toggleAuthenticated}
                 />
@@ -173,7 +184,7 @@ const App = () => {
           <Link className="links footerlinks" to="/">
             Home
           </Link>
-          <Link className="links footerlinks" to="/">
+          <Link className="links footerlinks" to="logout">
             Sign Out
           </Link>
         </nav>

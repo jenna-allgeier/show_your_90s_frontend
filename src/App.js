@@ -16,6 +16,7 @@ import { CheckSession } from "./services/Auth";
 const App = () => {
   const [authenticated, toggleAuthenticated] = useState(false);
   const [user, setUser] = useState([]);
+  const [userProfile, setUserProfile] = useState({});
   const [posts, setPosts] = useState([]);
   const [post, selectedPost] = useState([]);
   const [newPost, setNewPost] = useState({});
@@ -28,6 +29,11 @@ const App = () => {
     setUser(user);
     toggleAuthenticated(true);
   };
+
+  const setUserProfileHandler = (user) => {
+    setUserProfile(user)
+  }
+
   const setUserHandler = (aUser) => {
     setUser(aUser);
   };
@@ -67,7 +73,15 @@ const App = () => {
         <div className="profileimg">
           <Routes>
             <Route index element={<Welcome />} />
-            <Route path="profile/:userId" element={<UserProfile />} />
+            <Route path="profile/:userId" 
+              element={
+                <UserProfile
+                  user={user}
+                  userProfile={userProfile}
+                  setUserProfile={setUserProfile}
+                  setUserProfileHandler={setUserProfileHandler} 
+                />} 
+                />
             <Route
               path="login"
               element={

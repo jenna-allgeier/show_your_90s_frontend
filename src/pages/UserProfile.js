@@ -8,6 +8,7 @@ import { useNavigate } from "react-router-dom";
 const UserProfile = (props) => {
 
 console.log(props.userProfile.posts)
+console.log(props.userProfile.posts.length)
 
 let navigate = useNavigate();
   const linkToPostDetails = (post) => {

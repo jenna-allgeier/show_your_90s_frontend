@@ -9,6 +9,7 @@ import PostDetails from "./pages/PostDetails";
 import UpdatePost from "./components/UpdatePost";
 import CreatePost from "./components/CreatePost";
 import NewUserLogin from "./pages/NewUserLogin";
+import Logout from "./pages/Logout";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { CheckSession } from "./services/Auth";
@@ -99,6 +100,15 @@ const App = () => {
               }
             />
             <Route
+              path="logout"
+              element={
+                <Logout
+                  setUser={setUser}
+                  toggleAuthenticated={toggleAuthenticated}
+                />
+              }
+            />
+            <Route
               path="new-user"
               element={
                 <NewUserLogin
@@ -170,7 +180,7 @@ const App = () => {
           <Link className="links footerlinks" to="/">
             Home
           </Link>
-          <Link className="links footerlinks" to="/">
+          <Link className="links footerlinks" to="logout">
             Sign Out
           </Link>
         </nav>

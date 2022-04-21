@@ -3,7 +3,6 @@ import "../styles/App.css";
 import { useNavigate } from "react-router-dom";
 
 const Comments = (props) => {
-  console.log(props.previousComments)
   return (
     <div>
       <div className="comments">

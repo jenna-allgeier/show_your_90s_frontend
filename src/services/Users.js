@@ -9,9 +9,10 @@ export const GetAllUsers = async () => {
   }
 }
 
-export const GetUserByPk = async () => {
+export const GetUserByPk = async (userId) => {
     try {
-      const res = await Client.getbyPk('/users')
+      const res = await Client.get(`api/users/${userId}`)
+      console.log(res.data)
       return res.data
     } catch (error) {
       throw error

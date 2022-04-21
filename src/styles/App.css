@@ -378,7 +378,7 @@ background-image: url("https://images.squarespace-cdn.com/content/v1/58265288841
 .profile-container {
   display: flex;
   flex-flow: column;
-  color: #2C1679;
+  color: white;
   text-align: center;
   justify-content: center;
   align-items: center;
@@ -388,10 +388,12 @@ background-image: url("https://images.squarespace-cdn.com/content/v1/58265288841
 
 .about-you {
   height: 70px;
+  color: white;
 }
 
 .user-info {
   margin-bottom: 20px;
+  color: white;
 }
 
 .user-collection {

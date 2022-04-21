@@ -23,6 +23,8 @@ const App = () => {
   const [previousComments, setPreviousComments] = useState([]);
   const [selectPost, setSelectPost] = useState({});
 
+  
+
   const checkToken = async () => {
     const user = await CheckSession();
     setUser(user);
@@ -67,7 +69,15 @@ const App = () => {
         <div className="backgroundimg profileimg">
           <Routes>
             <Route index element={<Welcome />} />
-            <Route path="profile/:userId" element={<UserProfile />} />
+            <Route 
+              path="profile/:userId" 
+              element={
+                <UserProfile
+                  user={user}
+                  setUserHandler={setUserHandler}
+                />
+              } 
+            />
             <Route
               path="login"
               element={
@@ -139,7 +149,7 @@ const App = () => {
                 selectedPostHandler={selectedPostHandler}
               />
             } 
-          />
+            />
           </Routes>
         </div>
       </main>

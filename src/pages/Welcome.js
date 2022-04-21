@@ -5,6 +5,7 @@ const Welcome = () => {
   return (
     <div className="welcome">
       <div className="welcome-text">
+        <img src="" />
         <h1 className="show-your-90s threeD">Show Your 90's!</h1>
         <h1 className="welcomeMessage threeD">Finally! A place to share your favorite 90s memorabilia!</h1>
       </div>

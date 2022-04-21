@@ -24,7 +24,7 @@ const App = () => {
   const [previousComments, setPreviousComments] = useState([]);
   const [selectPost, setSelectPost] = useState({});
 
-  console.log(user)
+  console.log(process.env.NODE_ENV)
 
   let userId = user.id
 

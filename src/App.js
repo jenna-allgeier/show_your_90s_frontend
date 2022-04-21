@@ -25,7 +25,7 @@ const App = () => {
   const [previousComments, setPreviousComments] = useState([]);
   const [selectPost, setSelectPost] = useState({});
 
-  console.log(user)
+  console.log(userProfile)
   
   console.log(process.env.NODE_ENV)
 
@@ -96,6 +96,7 @@ const App = () => {
                 <LoginRegister
                   setUser={setUser}
                   toggleAuthenticated={toggleAuthenticated}
+                  setUserProfileHandler={setUserProfileHandler}
                 />
               }
             />

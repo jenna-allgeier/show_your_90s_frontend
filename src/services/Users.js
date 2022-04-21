@@ -11,7 +11,7 @@ export const GetAllUsers = async () => {
 
 export const GetUserProfile = async (userId) => {
     try {
-      const res = await Client.get(`api/users/${userId}`)
+      const res = await Client.get(`api/users/session/${userId}`)
       return res.data
     } catch (error) {
       throw error

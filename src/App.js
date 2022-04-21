@@ -24,7 +24,9 @@ const App = () => {
   const [previousComments, setPreviousComments] = useState([]);
   const [selectPost, setSelectPost] = useState({});
 
-  console.log(user)
+  console.log(process.env.NODE_ENV)
+
+  let userId = user.id
 
   const checkToken = async () => {
     const user = await CheckSession();
@@ -77,9 +79,10 @@ const App = () => {
         <div className="profileimg">
           <Routes>
             <Route index element={<Welcome />} />
-            <Route path="profile/:userId" 
+            <Route path={`profile/${userId}`}
               element={
                 <UserProfile
+                  userId={userId}
                   user={user}
                   userProfile={userProfile}
                   setUserProfile={setUserProfile}

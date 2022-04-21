@@ -17,8 +17,6 @@ const UserInfo = (props) => {
         renderUserInfo()
     }, [])
 
-    console.log(props.userProfile.firstName)
-
     return (
         <div>
             <div className="profile-info">

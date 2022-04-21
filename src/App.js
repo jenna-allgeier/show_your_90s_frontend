@@ -64,7 +64,7 @@ const App = () => {
       <Navbar user={user} />
 
       <main>
-        <div className="backgroundimg profileimg">
+        <div className="profileimg">
           <Routes>
             <Route index element={<Welcome />} />
             <Route path="profile/:userId" element={<UserProfile />} />

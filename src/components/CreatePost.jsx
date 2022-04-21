@@ -32,16 +32,16 @@ const CreatePost = (props) => {
         <div>
             <form className="createForm" onSubmit={submitData}>
               <h1 className="add" >+</h1>
-             <input
-            className="formInput"
+             <textarea
+            className="textArea"
             type="text"
             value={formValues.postName}
             onChange={handlePost}
             name={"postName"}
             placeholder={"name"}
           />
-          <input
-            className="formInput"
+          <textarea
+            className="textArea"
             type="text"
             value={formValues.releaseDate}
             onChange={handlePost}
@@ -56,8 +56,8 @@ const CreatePost = (props) => {
             name={"description"}
             placeholder={"description"}
           />
-          <input
-            className="formInput"
+          <textarea
+            className="textArea"
             type="text"
             value={formValues.images}
             onChange={handlePost}

@@ -11,11 +11,11 @@ const Navbar = (props) => {
                 <Link className="links homeLink" to='/'>Home</Link>
                 <Link className="links loginLink" to='/login'>Login/Register</Link>
                 <Link className="links feedLink" to='/feed'>Feed</Link>
-                { props.user ? 
+                {/* { props.user ?  */}
                 <Link className= "links profileLink" to={`/profile/${userId}`}>
-                     {/* <img src={`${props.userProfile.picture}`}></img> */}
+                     <img className="profilePic" src={`${props.user.picture}`}></img>
                     Profile</Link>
-                : ""}
+                {/* : ""} */}
             </nav>
         </header>
     )

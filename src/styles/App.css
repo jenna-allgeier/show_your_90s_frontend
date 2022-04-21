@@ -48,6 +48,7 @@
   align-items: center;
   align-content: center;
   margin: 0px;
+
 }
 
 @keyframes example1 {
@@ -128,22 +129,35 @@
   animation-timing-function: ease-in-out;
 }
 
-/* @keyframes boomBox {
-  0%   { box-shadow: 5px 5px 10px rgb(236, 183, 6); right:0%; top:20%;}
-  45%  {color:rgb(250, 250, 134); box-shadow: 20px 20px 10px #E994BF; transform: rotate(2000deg); left:10%; top:20%;}
-  75%  { box-shadow: 1000px 1px 1000px rgb(250, 250, 134); transform: rotate(500deg);  right:120%; top:50%;}
-  100% { box-shadow: 10px 1px 150px white;  right:120%; top:50%;} 
+ @keyframes boomBox {
+  0%   { box-shadow: 100px 1px 1000px rgb(236, 183, 6); right:120%; top:50%;}
+  45%  {color:rgb(250, 250, 134); box-shadow: 1000px 1px 1000px #E994BF; transform: rotate(2000deg); left:120%; top:50%;}
+  75%  { box-shadow: 100px 1px 1000px rgb(250, 250, 134); transform: rotate(1000deg);  right:120%; top:50%;}
+  100% { box-shadow: 1000px 1px 100px white;  right:120%; top:100%;} 
+}
+ .boomBox {
+  position: fixed;
+  height: 150px;
+  bottom:0;
+  left:0;
+  margin-bottom: 5px;
+  animation-name: boomBox;
+  animation-duration: 6s;
+  animation-timing-function: ease-out;
+} 
+.boomBox:hover {
+ 
+  left: 20px;
 }
 
-.boomBox {
-  position: relative;
-  height: 250px;
-  top:27%;
-  left:40%;
-  animation-name: boomBox;
-  animation-duration: 10s;
-  animation-timing-function: ease-out;
-} */
+.profilePic {
+  width: 20px;
+}
+
+.boomBox:active {
+  bottom: 20px;
+  box-shadow: 200px 1px 500px rgb(236, 183, 6);
+}
 
 .welcome-btns {
   margin-left: 45px;
@@ -239,9 +253,28 @@
   justify-content: flex-start;
   align-items: center;
   font-family: Arial, Helvetica, sans-serif;
-  margin: 15px;
+  margin:  15px 800px 600px 15px ;
 }
 
+.textArea {
+  padding: 10px;
+  margin: 8px;
+  width: 600px;
+  border-color: #0CCDDB;
+  text-align: start;
+  padding-left: 12px;
+  transition-duration: 1s;
+}
+
+.textArea:hover {
+  background-color: rgb(185, 144, 144);
+  border-color: red;
+}
+
+.textArea:active {
+  background-color: #39beba;
+  transition-duration: .1s;
+}
 
 .formInput {
   padding: 10px;
@@ -256,10 +289,21 @@
   height: 100px;
   padding: 10px;
   margin: 8px;
-  width: 300px;
+  width: 600px;
   border-color: #0CCDDB;
   text-align: start;
   padding-left: 12px;
+  transition-duration: 1s;
+}
+
+.description:hover {
+  background-color: rgb(129, 146, 182);
+  border-color: red;
+}
+
+.description:active {
+  background-color: #6ecc61;
+  transition-duration: .1s;
 }
 
 .button {
@@ -353,15 +397,15 @@ background-image: url("https://images.squarespace-cdn.com/content/v1/58265288841
 }
 .createPost {
   position: fixed;
-  top: 80%;
-  left: 93%;
+  top: 82%;
+  left: 95%;
   transition-duration: 0.1;
 }
 
 .createPost:hover {
   margin: 100px;
-  top: 28%;
-  left: 67%;
+  top: 1%;
+  left: 20%;
   background-color: rgba(100, 151, 180, 0.644);
 }
 
@@ -553,14 +597,9 @@ background-image: url("https://images.squarespace-cdn.com/content/v1/58265288841
 .backgroundimg {
     background-image: url("https://i.imgur.com/yzEzwIK.png");
     background-repeat: no-repeat;
-     /* height: 800px; */
      padding-top: 32px;
-   /* Full height */
-  
-   height: 800px;
+     height: 800px;
 
-  
- 
    
   }
 

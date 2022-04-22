@@ -6,7 +6,6 @@ const Login = (props) => {
   return (
     
     <div className="login-register-title loginimage">
-      
       <div className="login-register-format">
         <div className="register">
         <Register />
@@ -16,7 +15,6 @@ const Login = (props) => {
         <LoginForm 
           setUser={props.setUser}
           toggleAuthenticated={props.toggleAuthenticated}/>
-
         </div>
       </div>
     </div>

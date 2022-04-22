@@ -2,7 +2,6 @@
 
 const Post = (props) => {
 
-  
     return (
       <div className="posts">
         <div className="img-wrapper">

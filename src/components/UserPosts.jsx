@@ -1,8 +1,7 @@
-
 const UserPosts = (props) => {
-    return (
-        <div>
-           <div className="posts">
+  return (
+    <div>
+      <div className="posts">
         <div className="img-wrapper">
           <img className="image" src={props.image} alt="Post" />
         </div>
@@ -12,11 +11,8 @@ const UserPosts = (props) => {
           <p>Description: {props.description}</p>
         </div>
       </div>
+    </div>
+  );
+};
 
-        </div>
-    )
-}
-
-
-
-export default UserPosts
+export default UserPosts;

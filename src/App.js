@@ -70,14 +70,11 @@ const App = () => {
     }
   }, []);
 
-
-
   return (
     <div>
       <Navbar 
        userProfile={userProfile}
       user={user} />
-
       <main>
         <div className="welcome-img">
           <Routes>
@@ -175,17 +172,11 @@ const App = () => {
             } 
           />
           </Routes>
-
           <img className="boomBox" src="https://pngset.com/images/gif-boombox-background-boombox-clipart-stereo-electronics-radio-transparent-png-2845862.png" >
-   
-          
             </img>
         </div>
-        
       </main>
-
       <footer>
-        
         <nav className="navFooter loginfooter">
           <Link className="links footerlinks" to="/">
             Home

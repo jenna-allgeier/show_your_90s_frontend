@@ -12,7 +12,6 @@ export const GetCommentsByPostPk = async (postId) => {
 export const CreateComment = async (userId, postId, data) => {
   try {
     const res = await Client.post(`api/comments/${userId}/${postId}`, data);
-    console.log(res.data);
     return res.data;
   } catch (error) {
     throw error;

@@ -25,7 +25,7 @@ const LoginForm = (props) => {
   };
 
   return (
-    <div>
+    <div className="profileimg" >
       <div className="welcome-text">
         <h1 className="show-your-90s">Welcome to the 90's Baby</h1>
         <h1 className="welcomeMessage">Login</h1>

@@ -151,7 +151,10 @@
 }
 
 .profilePic {
-  width: 20px;
+  width: 30px;
+  margin-top: 5px;
+  margin-right: 5px;
+  border-radius: 100%;
 }
 
 .boomBox:active {
@@ -606,7 +609,7 @@ background-image: url("https://images.squarespace-cdn.com/content/v1/58265288841
   .profileimg {
     background-image: url("https://preview.redd.it/yk760wzrq5241.jpg?width=640&crop=smart&auto=webp&s=93094b88f6d85a25ab2bb24573e575ffa518cb4d");
     background-size: contain;
-    height: 1000px;
+    height: 1150px;
   }
 
 

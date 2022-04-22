@@ -2,7 +2,7 @@ import { useNavigate } from "react-router-dom";
 
 const Logout = (props) => {
 
-    let navigate = useNavigate
+    let navigate = useNavigate()
 
     const logoutUser = () => {
         props.setUser([]);
@@ -11,7 +11,7 @@ const Logout = (props) => {
     }
 
     const navigateToFeed = () => {
-        navigate("feed");
+        navigate("/feed");
     }
 
     return (

@@ -549,7 +549,8 @@ background-image: url("https://images.squarespace-cdn.com/content/v1/58265288841
 .profile-container {
   display: flex;
   flex-flow: column;
-  color: #2C1679;
+  color: #e994bf;
+  text-shadow: 2px 2px black;
   text-align: center;
   justify-content: center;
   align-items: center;
@@ -557,8 +558,12 @@ background-image: url("https://images.squarespace-cdn.com/content/v1/58265288841
   padding-top: 50px;
 }
 
-.about-you {
-  height: 70px;
+.user-name {
+  font-size: 50px;
+}
+
+.about {
+  font-size: 30px;
 }
 
 .user-info {

@@ -51,9 +51,9 @@ Show your 90's is a full stack PERN application. Designed to have full CRUD func
 
 ### ***App Screenshots:***
 
-![Home Page]([img]https://i.imgur.com/Gqzypo3.png[/img])
+![Home Page](https://i.imgur.com/Gqzypo3.png[/img])
 
-![Login and Register]([img]https://i.imgur.com/gimbcah.png[/img])
+![Login and Register](https://i.imgur.com/gimbcah.png[/img])
 
 ![Feed Page](https://i.imgur.com/vo4YW5g.png[/img])
 

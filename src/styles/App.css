@@ -114,8 +114,6 @@
 
 @keyframes car {
   0%   { box-shadow: 5px 5px 10px rgb(236, 183, 6); height: 75px; right:-10%; top:-10%;}
- /* 25%  { box-shadow: 20px 20px 20px rgb(236, 183, 6); height: 200px; right:30%; top:20%;}
-  50%  { box-shadow: 20px 20px 30px rgb(65, 65, 179);  height: 400px; right:50%; top:30%;} */
   75%  { box-shadow: 1000px 1px 1000px rgb(250, 250, 134); transform: rotate(50deg); height: 1000px; right:120%; top:50%;}
   100% { box-shadow: 10px 1px 150px white; height: 1000px; right:120%; top:50%;} 
 }
@@ -333,8 +331,6 @@
 }
 
 .login-register-title {
-  /* margin-top: 20px;
-  margin-bottom: -30px; */
   font-size: 20px;
 }
 
@@ -566,25 +562,6 @@ background-image: url("https://images.squarespace-cdn.com/content/v1/58265288841
   transition-duration: .1s;
 }
 
-/* .textArea {
-  padding: 10px;
-  margin: 8px;
-  width: 600px;
-  border-color: #0CCDDB;
-  text-align: start;
-  padding-left: 12px;
-  transition-duration: 1s;
-}
-
-.textArea:hover {
-  background-color: rgb(185, 144, 144);
-  border-color: red;
-}
-
-.textArea:active {
-  background-color: #39beba;
-  transition-duration: .1s;
-} */
 
 /* Profile */
 
@@ -741,17 +718,6 @@ footer {
   font-family: 'Georgia';
   background-color: #39beba;
 }
-/* :-moz-full-screen(min-width: 1000px) {
-  .previous-comments {
-    color: white;
-    background-color: #39beba;
-    width: 250px;
-    position: fixed;
-    top: 25%;
-    left: 10px;
-  }
-} */
-
 
   .previous-comments {
     color: white;

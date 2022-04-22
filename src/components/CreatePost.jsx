@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import "../styles/App.css";
 import { AddPost } from "../services/Posts";
 
-
 const CreatePost = (props) => {
 
     const [formValues, setFormValues] = useState({
@@ -19,7 +18,6 @@ const CreatePost = (props) => {
     };
     
     const submitData = async (e) => {
-        // e.preventDefault();
         await AddPost(userId, {
             postName: formValues.postName,
             releaseDate: formValues.releaseDate,
@@ -68,7 +66,6 @@ const CreatePost = (props) => {
         </form>
         </div>
     )
-
 }
 
 export default CreatePost

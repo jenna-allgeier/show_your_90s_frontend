@@ -1,7 +1,5 @@
 import { useEffect } from "react";
 import { GetUserProfile } from "../services/Users"
-import UserPosts from "./UserPosts";
-
 
 const UserInfo = (props) => {
 

@@ -11,7 +11,7 @@ const Logout = (props) => {
     }
 
     const navigateToFeed = () => {
-        navigate("feed");
+        navigate("/feed");
     }
 
     return (

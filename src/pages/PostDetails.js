@@ -73,7 +73,7 @@ const PostDetails = (props) => {
         />
       </div>
       <div className="previous-comments">
-        <h2>Previous Comments</h2>
+        <h2>Comments</h2>
         <Comments
           name={props.previousComments.name}
           description={props.previousComments.description}

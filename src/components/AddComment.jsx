@@ -43,7 +43,7 @@ const AddComment = (props) => {
           placeholder="description"
           required
         />
-        <input
+        <textarea
           className="commentInput"
           type="text"
           value={formValues.name}

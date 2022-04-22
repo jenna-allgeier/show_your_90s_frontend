@@ -20,9 +20,10 @@ const UserInfo = (props) => {
     return (
         <div className="profileContainer">
             <div className="profile-info">
-                <h1>{props.userProfile.firstName} {props.userProfile.lastName}</h1>
+                <h1 className="profileName" >{props.userProfile.firstName} {props.userProfile.lastName}</h1>
                 <img className="profile-pic" src={props.userProfile.picture} alt="Profile Pic" />
-                <h3>About: {props.userProfile.about}</h3>
+                <h1 className="about" >About: </h1>
+                <p className="info" >{props.userProfile.about}</p>
             </div>
         </div>
     )

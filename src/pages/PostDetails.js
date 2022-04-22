@@ -41,7 +41,7 @@ const PostDetails = (props) => {
   }
 
   return (
-    <div className="post-details">
+    <div className=" profileimg post-details">
       <div className="header" />
       <div className="post">
         <div className="detail-container">

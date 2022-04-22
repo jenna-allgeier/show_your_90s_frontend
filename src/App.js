@@ -70,6 +70,8 @@ const App = () => {
     }
   }, []);
 
+
+
   return (
     <div>
       <Navbar 
@@ -173,7 +175,11 @@ const App = () => {
             } 
           />
           </Routes>
-          <img className="boomBox" src="http://assets.stickpng.com/images/5c8662cfc115b30282adb5b3.png" ></img>
+
+          <img className="boomBox" src="https://pngset.com/images/gif-boombox-background-boombox-clipart-stereo-electronics-radio-transparent-png-2845862.png" >
+   
+          
+            </img>
         </div>
         
       </main>

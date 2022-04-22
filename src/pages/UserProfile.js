@@ -15,7 +15,7 @@ let navigate = useNavigate();
   };
 
   return (
-    <div className="profile-background">
+    <div className=" profileimg profile-background">
       <div className="profile-container">
         <div className="user-info">
           <UserInfo

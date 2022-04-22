@@ -79,7 +79,7 @@ const App = () => {
       user={user} />
 
       <main>
-        <div className="">
+        <div className="welcome-img">
           <Routes>
             <Route index element={<Welcome />} />
             <Route path={`profile/${userId}`}

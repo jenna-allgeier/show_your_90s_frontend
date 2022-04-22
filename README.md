@@ -118,4 +118,9 @@ Show your 90's is a full stack PERN application. Designed to have full CRUD func
 
 ### ***Credits***
 
+- https://stackoverflow.com/
+- https://www.w3schools.com/css/css3_buttons.asp
+- https://designs.ai/colors/
+- https://www.google.com/imghp?hl=en&ogbl
+
 #### **[Image of Lava Lamp](https://www.lifesavvy.com/reviews/the-best-lava-lamps-for-illuminating-your-bedroom/)**

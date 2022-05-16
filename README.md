@@ -17,7 +17,7 @@
 &nbsp;
 ## ***DESCRIPTION***
 ### Finally! A place to share your favorite 90s memorabilia!
-&nbsp;
+
 Show your 90's is a full stack PERN application. Designed to have full CRUD functionality. Meaning you can Post, Get, Put, and Delete your favorite 90's memborbilia, and relive the greatest decade of our life time. 
 
 #### But why? Find out here ![SLIDES](https://docs.google.com/presentation/d/1gbWMI4Hrw0ed9FUgHYPMJ6Yyef6LfyTFmL96CIGToY4/edit#slide=id.p
@@ -121,5 +121,10 @@ Show your 90's is a full stack PERN application. Designed to have full CRUD func
 &nbsp;
 
 ### ***Credits***
+
+- https://stackoverflow.com/
+- https://www.w3schools.com/css/css3_buttons.asp
+- https://designs.ai/colors/
+- https://www.google.com/imghp?hl=en&ogbl
 
 #### **[Image of Lava Lamp](https://www.lifesavvy.com/reviews/the-best-lava-lamps-for-illuminating-your-bedroom/)**

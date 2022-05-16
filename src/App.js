@@ -13,6 +13,7 @@ import Logout from "./pages/Logout";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { CheckSession } from "./services/Auth";
+import boombox from "./assets/boombox-cutout.png"
 
 const App = () => {
   const [authenticated, toggleAuthenticated] = useState(false);
@@ -172,8 +173,7 @@ const App = () => {
             } 
           />
           </Routes>
-          <img className="boomBox" src="https://pngset.com/images/gif-boombox-background-boombox-clipart-stereo-electronics-radio-transparent-png-2845862.png" >
-            </img>
+          <img className="boomBox" src={boombox}/>
         </div>
       </main>
       <footer>

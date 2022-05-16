@@ -122,7 +122,7 @@
   height: 0px;
   position: relative;
   animation-name: car;
-  animation-duration: 5s;
+  animation-duration: 4s;
   top: 10%;
   
   animation-timing-function: ease-in-out;
@@ -632,7 +632,8 @@ background-image: url("https://images.squarespace-cdn.com/content/v1/58265288841
   .welcome-img {
     background-image: url("https://i.imgur.com/yzEzwIK.png");
     background-repeat: no-repeat;
-    padding-top: 60px;
+    height: 500px;
+    padding-top: 40px;
     background-size: cover; 
   }
 
